@@ -1,0 +1,80 @@
+# Figures
+*.png
+*.pdf
+*.jpg
+
+# Latex files
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.nav
+*.snm
+*.toc
+*.gz
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.sta
+*.gz
+*.gz(busy)
+*.bib
+absence.bib
+*.xdv
+*.xwm
+
+# Data files
+*.csv
+*.dta
+*.dbf
+*.shp
+*.prj
+*.shx
+*.sbn
+*.Rhistory
+*.Rapp.history
+*.parquet
+*.rds
+*.Rdata
+*.rda
+*.xlsx
+*.xls
+
+# Microsoft Office Files
+*.docx
+
+# Sublime Files
+*.sublime-workspace
+*.sublime-project
+
+# Miscellaneous
+*.zip
+*.dropbox
+*.sbx
+*.ini
+
+# MacOSX system files
+*.DS_Store
+
+# Folders:
+/data/supplementary
+/data/log
+/data/scripts/log
+/admin/
+/presentations/output/
+/drafts
+/data/output/tables/*.tex
+/data/output/text/*.tex
+/submissions/2023-01 BJPS/2023-07 r&r/output/tables/*.tex
+/submissions/2023-01 BJPS/2023-07 r&r/output/text/*.tex
+/.gtm/
+.Rproj.user
+/submissions/2021-07 AERA/data/output/
+/submissions/2021-07 AERA/memoir*
+
+# Files to include
+!/data/output/tables/mergereport.tex
+!/data/output/tables/disecleansummary.tex
+!/data/output/tables/summarycompletepanel.tex

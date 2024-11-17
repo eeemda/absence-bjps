@@ -1,0 +1,606 @@
+%!TEX program = xelatex
+
+\documentclass[hidelinks, 12pt, article, oneside]{memoir}
+
+\input{preamble.tex}
+
+\input{titlepage.tex}
+
+\DoubleSpacing*
+
+\section*{Introduction}
+
+Public sector worker absenteeism is a reason for the poor performance of public services in low- and middle-income countries \citep{Evans1995, Tendler1997}. One measure of poor bureaucratic performance common to low- and middle-income countries is absenteeism and work shirking.  For basic services like health and education, teachers and health care workers are often absent and, when present, not working \citep{Chaudhury2006}. This absenteeism is expensive. In a nationally representative sample of villages across India, \cite{Muralidharan2016} find that teacher absenteeism costs \$1.5 billion a year. But despite continued academic, media,\footnote{Anand, Geeta. February 19, 2016. ``Fighting Truancy Among India's Teachers, With a Pistol and a Stick''. \emph{The New York Times}.} and policy attention \citep[21]{MinistryofHumanResourceDevelopment2020}, absenteeism continues to be a chronic problem for public service provision.
+
+Work across political economy has contrasting predictions on the ability of the state and private actors to reduce absenteeism. On the one hand, bureaucrats and their unions are portrayed as powerful political actors that can turn out voters \citep{Larreguy2017a}, swing the vote \citep{Neggers2018}, easily organize and engage in the electoral and policy process \citep{Anzia2013, Moe2015}, and run their own candidates \citep{Cook1996}.  In contexts of weak state capacity, low levels of accountability, and large informational asymmetries in principal-agent relationships, high levels of absenteeism should not be a mystery. And yet, bureaucrats are subject to frequent sanctions through transfers \citep{Brierley2020, Iyer2012a, Wade1985}, and the docking of pay.\footnote{Staff Reporter, November 3, 2021. ``Uttar Pradesh government issues final warning to school teachers.'' \emph{The Times of India}.}  Absenteeism, as opposed to other measures of public sector worker effort such as long-run quality, is easy to observe \citep{Mani2007}. A service recipient only has to visit a school or hospital and notice that a teacher or doctor is not present to understand the problem. Given these levers governments and elected politicians have to hold public sector workers accountable, why do politicians not use them more often to hold bureaucrats accountable?
+
+Reconciling these contrasting predictions, this paper argues that bureaucrats' ability to shirk and politicians' ability to reward and sanction have a \emph{temporal} dimension \citep{Carpenter2015}. I explore the effects of \emph{electoral cycles} on absenteeism \citep{Nordhaus1975}: Politicians leverage their powers to sanction bureaucrats when political incentives are salient and are less likely to sanction bureaucrats when political incentives are less salient.  Politicians pay differential attention to bureaucrats over the course of their tenure. They are more likely to hold bureaucrats accountable around the electoral period when they are more likely to be scrutinized and rewarded for better performance as elections focus political attention. The decreased attention from politicians outside of elections provides bureaucrats with significant leeway. With myopic voters and a fragmented party system, this creates an absence cycle around elections.
+
+I test this argument using the case of teachers in India. I construct a geocoded school-level panel of all government schools in India from 2006 to 2018 matched to state-level assembly electoral data over the same period.  Leveraging the staggered timing of elections between and within states and repeated school-level observations to identify the effects of the election cycle on teacher attendance, I employ an event-study design of election timing on absenteeism and find that teachers are less likely to be absent in the year immediately preceding an election.  Specifically, I find that in the year before an election, within school absenteeism declines by \input{data/output/text/preelectionpointestimategovernment}percentage points.  The effect is large and consistent across several specifications, including modeling the full electoral cycle and using the time to election (Appendix \ref{appendixsection:alternativespecifications}).  I do not find similar electoral cycles in private schools, providing further support for the effects of electoral cycles on variation in accountability in the public sector and the lack of sanctions politicians have over the private sector.
+
+As the school census panel is self-reported, there could be concerns that teachers are ``cooking the books'' and reporting lower levels of absenteeism near elections to appease politicians, policy-makers, and parents when there has not been any underlying change in their behavior. To address these concerns, I re-run a similar analysis on an independently collected school survey and also find evidence of an electoral cycle in absenteeism. Here, absenteeism exhibits a cycle, with higher levels of absenteeism further from elections and lower levels closer to elections.
+
+Exploring the channels through which the electoral cycle operates, I do not find support for two other channels through which bureaucrats can be held accountable, arguing they are less likely to exhibit dynamic relationships over time. Higher levels of mid-level bureaucrat or parental effort do not vary across the electoral cycle, evidence consistent with the channel running through politicians. The null results on these two channels suggest that the channel is through the differential incentives \emph{elected politicians} face over the course of their tenure, rather than through other parts of the bureaucracy or bottom-up pressures from parents.
+
+Finally, I calculate the cost of absenteeism, and the benefits of reduced absenteeism, for students and the public purse.  Test scores improve in election years in government schools, but remain stable across the electoral cycle in private schools. The fiscal recovery from reduced absenteeism is also large. I calculate that the difference in absenteeism between the year before an election and the year after an election results in a difference of approximately \$36 to \$75 million in wages lost between those two years (Appendix \ref{appendixsection:fiscalcost}).
+
+\section*{Contributions}
+
+This paper makes at least three significant contributions.  First, the paper moves beyond explanations rooted in \emph{static} principal-agent relationships to explain variations in bureaucratic performance through what \cite{Carpenter2015} have called ``transactional authority.'' The study of bureaucratic performance in political science has traditionally been motivated by the idea that bureaucrats are embedded in principal-agent relationships \citep{Dixit2002, Gailmard2012, Wilson1991}, with asymmetrical information and moral hazards constraints to better performance.  Better information, in the form of clearer lines of accountability \citep{Dasgupta2020, Gulzar2017}, better channels of communication \citep{Bhavnani2019, Jiang2018}, or providing information \citep{Bjorkman2009, Pradhan2014}, results in better bureaucratic performance and reduced shirking. Targeting adverse selection as the second constraint in the principal-agent relationship has also been found to impact bureaucratic performance through meritocratic hiring \citep{Oliveros2018}. Reducing the political influence that bureaucrats have is also frequently presented as a solution \citep{Larreguy2017a, Moe2005}. For policy, these papers suggest that stronger political control of bureaucrats will lead to better bureaucratic performance.
+
+In contrast to that literature, this paper presents theory and evidence showing that the inability of politicians to monitor bureaucrats is not necessarily the binding constraint to better bureaucratic performance. I show that politicians exercise their powers when incentivized around elections. In ``transactional authority,'' these relationships are dynamic \emph{over time} and are constantly negotiated and contested by a changing set of actors \citep{Carpenter2015}.  While public sector workers can be responsive to one-shot intervention efforts, they are also embedded in relationships that are repeated over time.  Policy-makers looking to address chronic absenteeism must take these longer relationships into account, and both the power to sanction that politicians hold and the political advantages public sector workers hold to influence political outcomes \citep{Krause1999}. Given the close tie between a politician's power to sanction and electoral incentives, one potential reform to address chronic absenteeism would be to weaken this chain of accountability and strengthen chains of accountability that are divorced from electoral incentives, such as those between teachers and mid-level bureaucrats.  Indeed, these are already being considered for mid-level bureaucrats,\footnote{\emph{T.S.R Subramanian vs. Union of India}, Supreme Court of India, Writ Petition (Civil) No. 82, October 31, 2013.} and could be extended to apply to front-line functionaries, too. 
+
+Through this, the paper joins a growing literature that studies the control agents, in this case teachers, have on principals, in this case politicians.  Bureaucrats are not only embedded in principal-agent relationships, but can also elect their principals \citep{Moe2015}, campaign for their preferred candidates \citep{Larreguy2017a}, mobilize voters \citep{Anzia2013}, and can regularly be sanctioned by politicians through transfers \citep{Brierley2020}. Bureaucratic performance is as much influenced by the control agents have on principals as the inverse, and greater political control might perversely worsen bureaucratic performance by increasing the reaction of agents.  The principal-agent relationship is continuously contested and re-negotiated over time, complicating the one-sided nature of sanctioning traditionally conceived in principal-agent relationships \citep{Carpenter2015}.
+
+Second, this paper theorizes on the front-line functionaries of the bureaucracy who ``interact with citizens directly and have discretion over significant aspects of citizens' lives'' \citep[4]{Lipsky2010}. They are unique to other types of bureaucrats as they are geographically dispersed, well organized politically, and regularly interface with citizens. Because of this, they can not only influence political control through upward pressure on politicians but also influence political control through their influence on voters.  The paper joins literature that recognizes that these types of bureaucrats should occupy a unique place in service provision and democratic accountability as they structure citizen evaluations of the state because of these features \citep{Bertelli2020, Mangla2015a, Martin2020}.
+
+Finally, I also use rich administrative data to answer an important question in political science.  While the use of administrative data is increasingly common in political science \citep{Lindgren2016, Gulzar2017}, I do not take the quality of this data at face value and verify it against independently collected sources \citep{Herrera2007}.  Administrative data suffers from the additional concern that bureaucrats have an incentive to misreport in ways that make their performance look better \citep{Martinez2022}, on top of all the data quality concerns of other sources of data.  Verified against other sources of data, however, administrative data provides great potential for students of political science as it allows us to answer big questions at scale, especially as the data gathering capacity of states improves \citep{Jerven2013, Jensenius2017}.
+
+In the next section, I outline the ways that teachers, politicians, and other civil society actors are embedded in \emph{dynamic} relationships of accountability over time. I outline the constraints all sets of actors face and explain why front-line functionaries should occupy a distinct place in our theorizing in political science.
+
+\section*{A Theory of Electoral Cycles \& Teacher Absenteeism}
+
+In this section, I develop a theory to argue that absenteeism should vary over electoral cycles, with absenteeism lower closer to elections and higher the further from an election. Actors interested in holding front-line functionaries accountable are in a ``dynamic relationship,'' where ``repeated interactions among politicians and agency personnel\ldots [provide] both the principal and agent [with] benefits,'' \citep[14-15]{Carpenter2015}. The returns to holding teachers accountable vary over time, with the returns higher closer to elections. I begin by describing the costs and benefits elected politicians, mid-level bureaucrats, and service recipients -- the three sets of actors in relationships of accountability with teachers and other front-line service providers -- receive from holding teachers accountable and the tools each of them has to hold teachers accountable. These benefits are particularly acute for \emph{elected politicians}, principals with specific incentives to hold teachers accountable at a specific time. I then provide four observable implications I test in the remainder of the paper.
+
+Teachers and other front-line functionaries interact with three distinct sets of principals and relationships of accountability: top-down from politicians, top-down from mid-level bureaucrats, and bottom-up from service recipients. The first channel -- top-down from politicians -- has received increased attention from political scientists \citep{Callen2017, Dasgupta2020, Gulzar2017, Raffler2018}. Much of this work has sought to explain the pressures \emph{mid-level} bureaucrats face from politicians. The jobs of front-line functionaries, and teachers in particular, have several features that make them distinct from mid-level bureaucrats in their relationship with elected politicians.
+
+First, they are greater in number and geographically dispersed. With the mass expansion of education in India, there is now a primary school within one kilometer of every village, meaning that there is at least one primary school teacher posted to work within proximity to most citizens in the country \citep{GovernmentofIndia2009}. Teachers are also well organized through unions. While union power varies from state to state \citep{Beteille2017}, teacher unions are more formalized than other higher level bureaucrats \citep{Vaishnav2016b}. In West Bengal for example, teachers' unions are loosely incorporated into formal political parties \citep{Chakravarty2010}. As is common elsewhere, schools often serve as polling booths during elections and teachers work as booth monitors at election time, with suggestions that they employ subtle pressures to influence turnout and vote choice \citep{Neggers2018, Larreguy2017a}. Teacher tenures are long, with the average length of service of 12 years stretching over multiple electoral cycles \citep{NUEPA2017}. Teachers also become their own principals by running for office and becoming politicians themselves \citep{Kingdon2009a, Moe2005},\footnote{Using data from candidates affidavits from the last state-level elections where candidates were required to self-declare their profession \citep{Agarwal2021a}, two percent of all Legislative Assembly candidates and one percent of all winners declared they were teachers.  Conditional on running, teachers have a 50 percent probability of winning an election.  Teachers were also the fifth most common profession among Legislative Assembly candidates after ``Lawyer,'' ``Party Worker,'' ``Real Estate,'' and ``Doctor.'' For Uttar Pradesh specifically, \citet[128]{Kingdon2009a} find that teachers held between 3 to 11 percent of all seats in the State Legislative Assembly between 1952 and 2007.} and through separate electorates for the upper house of state legislatures \citep{India1949}.\footnote{Article 171 (3c) of the Constitution of India states that 1/12$^{\text{th}}$ of State Legislative Council seats -- the higher legislative chamber at the state level -- are elected solely by citizens who have been teaching for at least three years \citep{India1949}. \citet[127]{Kingdon2009a} find that between 1952 and 2004, teachers were at least 13 percent of the Uttar Pradesh Legislative Council, but were often as high as 1/4 of all members.} Teachers put these organizational and geographic advantages to use, including meeting with governments to shape legislation, organizing signature campaigns, and opposing the ministers in elections among other activities \citep[129-30]{Kingdon2009a}. Finally, politicians can visit schools, and teachers and politicians can make claims on each other directly.\footnote{For one example, an interview respondent in Medak District in November 2013 gave examples of how in the run-up to the 2014 legislative assembly election, the local Member of the Legislative Assembly (MLA) had begun to visit their village more frequently to monitor the functioning of public services, including teacher attendance.  Interview with school parent conducted by the author in Medak District, Andhra Pradesh, November 2013.} The main goal of elected politicians is to win elections and together, these features of the teaching profession provide several channels through which teachers can make demands of, and impose costs on, politicians in their bids to win power.
+
+As in any dynamic relationship, these tools are not one-directional, however. Teachers and other front-line functionaries have relatively flat wage and role hierarchies, with little differentiation between an entry-level position and retirement \citep{Evans2020a}. This leaves elected politicians with two tools they can use to motivate teachers and hold them accountable: transfers and job regularization, with transfers the most commonly used tool \citep{Beteille2015, Brierley2020}.\footnote{Even though most teachers are only ever posted and transferred within one district, districts in India are large, so a posting within a district could be in a large urban area or a rural area with little connectivity. While the precise policies governing transfers vary from state to state, the general path is that all transfers within a state require the approval of the state minister of education and are often based on recommendations received by the minister from Members of the Legislative Assembly or District Education Officers.} In India specifically, politicians at the state level have been shown to transfer teachers strategically and leverage this power to reward teachers around election time \citep{Fagernas2020}. For teachers without secure tenures, politicians can also strategically leverage the promise of job regularization to win support from teachers,\footnote{Jain, Pankaj. November 27, 2021. ``Delhi CM Kejriwal joins contractual teachers’ protest in Punjab’s Mohali''. \emph{India News}. Staff Reporter, December 06, 2021. ``Punjab polls: Kejriwal's promise to Punjab teachers bites him back in Delhi, aided by Navjot Sidhu's dharna.'' \emph{India News}.} although, unlike transfers, the resolution of cases through this channel can often take up to a decade to pass.\footnote{Gopal Chawala and Others vs. State of Madhya Pradesh and Others. Supreme Court of India. No. 18579, October 30, 2013.}
+
+In the second relationship of accountability, mid-level bureaucrats monitor bureaucrats as part of their day-to-day functions, with responsibilities for performance and quality of the service \citep{Mangla2015a}. Bureaucracies successful at providing high-quality services often exhibit a combination of autonomy, deliberation, and intrinsic motivation \citep{Honig2021, Mangla2022}. Mid-level bureaucrats require the cooperation of teachers to fully implement education reforms, and must frequently bargain with them as a result \citep{Coyoli2024}. Accountability and coproduction with teachers is built into the day-to-day responsibilities and, potentially, professional ethos of bureaucrats, functions potentially independent from electoral pressures. Together, these suggest that the benefits bureaucrats receive for reducing absenteeism are intrinsically tied to professional identity rather than extrinsically to electoral reward like politicians and should not vary systematically over time. While bureaucrats may recognize any appeals for reduced absenteeism are likely to be better received at certain times over others, their motivations are not systematically tied to a political business cycle. On the other side of the relationship, teachers can pressure mid-level bureaucrats through collective action and direct lobbying. Teacher mobilization can and does result in the sanctioning of mid-level bureaucrats, although the channel often runs through elected politicians themselves, which again might receive a more sympathetic hearing closer to elections.\footnote{Express News Service. July 4, 2024. ``Mass transfer of Delhi school teachers: Minister Atishi orders to immediately withdraw July 1 order.'' emph{The Indian Express}. Jagga, Raakhi. April 5, 2022. ``Hours after warning ETT staff, govt says will withdraw order.'' \emph{The Indian Express}.}
+
+Finally, the primary goal service recipients such as parents have from reduced absenteeism is improved service quality. Parents are frequently organized in associations, such as school boards and parent-teacher associations in the United States, and School Management Committees (SMCs) in India, with the performance and attendance of teachers as one of their mandates.\footnote{While earlier work on SMCs suggested they were defunct across many parts of India \citep{Banerjee2010a}, state governments have placed increasing importance on their proper functioning in recent years, leading to their greater importance in monitoring in more recent years. See, for example, the Government of Delhi's efforts, Baruah, Sukrita. October 29, 2021. ``Across Delhi, govt schools, new programme to help parents be more hands-on with their children.'' \emph{The Indian Express}, New Delhi and \cite{Muralidharan2020}.} Service recipients can put pressure on front-line functionaries through increased monitoring \citep{Banerjee2010a, Raffler2018}, better information \citep{Bjorkman2009}, and voicing disaffection to bureaucrats or politicians \citep{Hirschman1970}.  SMCs in India also have greater control of the hiring and firing of contract teachers who make up approximately 13 percent of all teachers in the country \citep{NUEPA2017}.  While teachers likely have tremendous influence over parents, with at least two positions on SMCs reserved for teachers and responsibility for children's day-to-day success and safety in school, these levers are also not systematically tied to a political business cycle.
+
+Consistent with a dynamic relationship, the direction of sanctions and benefits in the relationship between teachers and their principals, in the form of politicians, bureaucrats, and parents, do not only flow from the principal to the agent \citep{Moe2005}. While all three of the actors have tools to hold teachers accountable, whether that is through punitive measures such as transfers, or appeals to intrinsic motivation through the use of voice, teachers are also able to impose costs and benefits on these actors.  Politicians derive electoral benefits and costs from teacher mobilization, bureaucrats derive professional rewards from the cooperation of teachers and potential sanctions from their mobilization, and service recipients receive better or worse services from greater or lower effort on the part of teachers. Teachers have as much influence over the goals of their principals as their principals do them.  With long teacher tenures and almost daily interactions in some cases, these interactions are also repeated frequently.
+
+To negotiate these dynamic and two-sided relationships, actors are most likely to exert effort and leverage tools to monitor front-line functionaries when they are likely to be rewarded for this effort, and not spend capital on monitoring when they are not, allowing front-line functionaries to shirk work in these periods. The primary tool elected politicians have -- transfers -- is fast and can be realized within a year. For mid-level bureaucrats and parents, the exercise of voice and appeals to intrinsic motivation are efforts that likely take greater time to bear fruit and are therefore not time-bound. The benefits they receive from reduced absenteeism, such as professional satisfaction in the case of bureaucrats and better quality services for service recipients, are constant and independent of the electoral cycle. Therefore, intrinsically motivated bureaucrats are likely to exert effort at all times, even if they recognize that effort is more likely to be translated into results around elections, as extrinsically motivated bureaucrats surely do. For parents, who cannot strategically time their relationship with schools by holding their children back until teachers are more engaged, the incentives to effort are also likely constant. Like elected politicians, both mid-level bureaucrats and service recipients are more likely to see returns to their efforts around elections, but, unlike elected politicians, their incentives to exert effort are otherwise constant over the electoral cycle.
+
+As a result, the return to leveraging the tools on both sides of the relationship is more likely to vary over time for one set of actors: \emph{elected politicians}. Politicians face voters approximately every five years, and given myopic voters, spending political capital to reduce absenteeism does not always lead to direct rewards in the short run. Politicians will ignore absenteeism as a problem until they are forced to do so. Therefore, the returns to politicians for addressing absenteeism vary inter-temporally -- they are higher closer to elections, and lower further from elections. These features create stronger dynamic incentives for politicians than through the two other actors in relationships of accountability. These features lead to four observable implications that I outline next and then test through a high-frequency source of data.
+
+\subsection*{Observable Implications}
+
+First, we should expect absenteeism to be lower immediately before an election, and higher in the immediate post-election period.  The greatest returns to politicians come from showing their power over front-line functionaries to voters in the immediate pre-election period. Given myopic voters, the closer to elections they observe politician effort, the more likely they are to reward politicians for this effort. Therefore, we should see a decrease in absenteeism before elections.
+
+Second, the dynamic relationship turns on the ability of newly elected politicians to reward teachers, or teachers negotiating reduced monitoring, when the political benefits of monitoring are low far from elections. A corollary of this is that absenteeism should be higher immediately after elections as there are low benefits to monitoring for politicians.
+
+Third, these effects should be concentrated in the public sector. In independent audits, \cite{Chaudhury2006} found that private school teachers are also likely to be absent, although the levels of absenteeism are much lower than in government schools in the same village.  With that, although absenteeism is also likely to be high in private schools, private school teachers are not subject to the same costs from absenteeism as teachers in government schools.  Teachers in private schools are managed at the school level and not by elected politicians, and cannot be transferred by politicians. As politicians only control teacher hiring and transfers in the public sector this leads to our third observable implication: we should expect an absenteeism cycle among government school teachers, but not among private school teachers.
+
+Fourth, this channel should run through \emph{politicians} and not higher levels of the bureaucracy or bottom-up from parents. These actors are engaged in relationships of accountability with teachers, but their incentives to hold teachers accountable do not vary as sharply over the electoral cycle as it does for elected politicians.  As a result, we should see weaker electoral cycles in higher-level bureaucratic or parental efforts. In the next section, I outline the context and data I use to test the dynamic relationship between politicians and teachers, the four observable implications, and four alternative explanations.
+
+\section*{Data \& Methods}
+
+This paper draws on two primary sources of data to create a school-level panel across India from 2006 to 2018 for the primary analysis.  I combine data from the District Information System for Education (DISE) School Report Cards with assembly constituency election data.
+
+\subsection*{District Information System for Education School Report Cards}
+
+The primary data source used in this paper is the DISE School Report Cards.  The data consists of self-reported data on school-level infrastructure, enrollment, educational outcomes, resources, and labor for every year from 2006 to 2018.\footnote{I refer to years here as the second year in the school year.  For example, the 2005-2006 academic year is referred to as 2006.  This is to correspond with the electoral year each academic year would correspond to.}  School headmasters are responsible for reporting the data to the National University of Education Planning and Administration (NUEPA) in September of the beginning of the academic year for the previous academic year.\footnote{NUEPA is a federal public university tasked with training education administrators and researchers as well as collecting nationally representative data on education at the primary and secondary levels.  Headmasters are responsible for filling out forms, which are then checked by cluster and district education officials.  District officials compile the DISE data for all schools in a given district and send it to the state office.  Each state then collects the information and sends it to NUEPA located in Delhi. DISE is also subject to a five percent backcheck every year by a different independent survey organization in every state that requires the survey firm to randomly sample whichever is large of ten percent of districts or two districts within a state and then five percent of schools within the sample districts \citep{Kaushal2010, Yagnamurthy2013}.  Discrepancies between the original survey and backcheck are low.}  All registered schools are mandated to report this data, meaning that all government schools in the country, as well as private schools that meet government standards for registration, are included in the data.  NUEPA and DISE send the data reporting sheet to unrecognized schools they are aware of, so the data represents an undercount of unrecognized schools as the Government does not have a complete record of schools that have not registered with them.  There are approximately 1.3 million government schools, 12 million government school-year observations, 570,000 private schools, and 2.7 million private-school year observations in the data (Panel A of Table \ref{table:summarystatistics}).
+
+\newcolumntype{L}{>{\raggedright}X}
+
+\SingleSpacing
+\begin{table}[htbp]
+    \centering
+    \begin{threeparttable}
+        \tiny
+        \caption{Summary Statistics}\label{table:summarystatistics}
+        \begin{tabularx}{\textwidth}{Lrrrrrrrrrr}
+            \toprule
+            \multicolumn{10}{L}{\textbf{Panel A: DISE School Level Summary Statistics}} \\
+            \input{data/output/tables/summarydise.tex}
+        \end{tabularx}
+        \begin{tabularx}{\textwidth}{Lrrrrrrrrrr}
+            \toprule
+            \multicolumn{10}{L}{\textbf{Panel B: IHDS School Level Summary Statistics}} \\
+            \input{data/output/tables/summaryihdsschool.tex}
+        \end{tabularx}
+        \begin{tabularx}{\textwidth}{Lrrrrrrrrrr}
+            \multicolumn{10}{L}{\textbf{Panel C: IHDS Teacher Level Summary Statistics}} \\
+            \input{data/output/tables/summaryihdsteacher.tex}
+        \end{tabularx}
+        \begin{tabularx}{\textwidth}{Lrrrrrrrrrr}
+            \multicolumn{10}{L}{\textbf{Panel D: IHDS Student Level Summary Statistics}} \\
+            \input{data/output/tables/summaryihdsstudent.tex}
+        \end{tabularx}
+        \begin{tablenotes}
+        \item Notes: For all panels, Columns 1-3 present summary statistics for government schools, Columns 4-6 present summary statistics for private schools, Column 7 presents a t-test of differences between government and private schools, and Columns 8-10 present summary statistics for all schools together.  For column 7, * p < 0.1, ** p < 0.05, *** p < 0.01.  Panel A presents summary statistics for the school-level panel of District Information Systems for Education data from 2006-2014, Panel B presents summary statistics from the 2011-2012 wave of the Indian Human Development Survey (IHDS) school survey at the school level, Panel C presents summary statistics for the IHDS data at the teacher level, and Panel D presents summary statistics for the IHDS data at the student level.
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+\DoubleSpacing
+
+\subsection*{Electoral Data}
+
+I then match the DISE data with electoral data at the assembly constituency level or Vidhan Sabha from 2001 to 2021.\footnote{Data was downloaded from the Trivedi Centre for Political Data at Ashoka University and more details of the data collection process can be found in \cite{Agarwal2021a}.}  Assembly constituencies are India's state-level legislative assemblies. Each assembly constituency elects one Member of the Legislative Assembly (MLA) in a first-past-the-post single-member district.  While the responsibility for education in India is divided between states and the national government, the management of education personnel is a state responsibility, making assembly constituencies the appropriate level of analysis, and MLAs the key actors in dynamic relationships of accountability with teachers.
+
+Education administration is managed at the district level within India, the third rung of India's administrative organization.  Within a state, DEOs are responsible for the recruitment, hiring, and management of teachers. DEOs are appointed by the State Chief Minister and serve at the district level.  Several assembly constituencies are nested within each district, so one DEO reports to several MLAs within their district (a map for one district, Tonk, is presented in Figure \ref{figure:tonk}).   School accountability lies with the DEO who is responsible for ensuring that teachers show up for work among other responsibilities including the hiring and firing of teachers, the delivery of school resources, and implementation of educational projects within their district.
+
+\begin{figure}[htbp]
+\caption{Nesting of Assembly Constituencies Within Education Districts: Tonk District, Rajasthan\label{figure:tonk}}
+\centering
+\begin{minipage}{6.5in}
+    \centering
+    \includegraphics[keepaspectratio = true, width = 3in]{data/output/figures/district_ac_overlay.pdf}
+    \tiny
+    \flushleft
+    \emph{Notes:} This figure presents how assembly constituencies are nested within education districts. The figure plots Tonk district in the Eastern part of the state of Rajasthan.  The black lines within the district represent the four assembly constituencies within Tonk: Deoli-Uniara, Malpura, Niwai, and Tonk, with the district capital of Tonk highlighted in red. The District Education Officer (DEO) is based in Tonk.
+\end{minipage}
+\end{figure}
+
+Matching schools involves a four-step process.\footnote{I provide a more detailed description of this process in Appendix \ref{appendixsection:locationmatching}.}  First, I match the school report cards data to the precise locations of schools.\footnote{Precise locations of schools can be found at \href{https://schoolgis.nic.in/}{https://schoolgis.nic.in/}.}  Using these locations, I placed schools in Assembly Constituencies using Assembly Constituency shapefiles.  For schools that did not have georeferenced coordinates available, the first 9 digits of the school identification number provided by DISE identifies the village in which the school was located.  For these schools, I matched their village to other schools within the same village that have georeferenced coordinates available.\footnote{Villages are nested within assembly constituencies, so a village-level match guarantees an assembly constituency-level match.}  Next, for schools that did not have georeferenced coordinates and were not co-located in a village with a school that did, I use a crosswalk from \cite{Adukia2019b} that matches DISE village codes to Census of India village codes.  Using precise village locations from the Census of India, I then matched these schools to Assembly Constituencies.  Finally, for any remaining schools, I used the postal pincode of the school provided in the DISE data by querying the postal pincode in Google Maps, placing the school in the center of that postal pincode.  I was able to match \input{data/output/text/matchrate.tex}\% of schools in the DISE data, with further details provided in Table \ref{appendixtable:matchrate}.
+
+I also use the Indian Human Development Survey (IHDS) to estimate the academic benefits of reduced absenteeism and independently verify absenteeism in Appendix \ref{appendixsection:ihdsdata}. There is no geographic location information for schools below the district level in the IHDS, so I cannot match schools to their exact assembly constituency.  Instead, I match the election date by only including election dates if all the assembly constituencies within a district held an election in the same year, which is the regular electoral calendar. By definition, this excludes all by-election years in the sample, approximately five percent of all elections.  Importantly, by-elections are part of the analysis for the analysis using DISE data.
+
+An important feature of the administrative structure of Indian education that motivates the theory in this paper is that assembly constituencies are nested within districts. There are between four and ten assembly constituencies in each district, so one DEO will respond to various MLAs (see Figure \ref{figure:tonk}) and can face differential pressures from MLAs depending on the individual MLA's electoral incentives.
+
+\subsection{Empirical Set-Up}
+
+I use an event study model to understand timing over the electoral cycle, with the staggered state-level assembly elections across India as the events. Specifically, I estimate the following equation using school-level yearly panel data:
+
+\begin{equation}
+Y_{it} = \sum_{j \neq 0} \alpha_{j} \cdot \mathbbm{1}\{ j = t - e_{c}\} + \beta_{1}y_{i,t-1} + Z_{i,t} + \gamma_{i} + \zeta_{t} + \epsilon_{it},\label{equation:businesscycle}
+\end{equation}
+
+where $i$ represents schools, $t$ represents the calendar year, and $Y$ is either an indicator for any absence in the school year, the logged number of absences per teacher in a given school-year or, from the IHDS, whether a teacher, conditional on being absent, was absent for official work such as implementing the census or serving as a poll monitor. $\alpha_{j} \cdot \mathbbm{1}\{j = t - e_c\}$ is an indicator variable that equals one when school $i$ is $j$ years away from the state election $e_i$ in year $t$.  $\alpha_{j} \cdot \mathbbm{1}\{j = t - e_c\}$ ranges over the electoral cycle from two years or more years to an election ($j = -2$) to 2 or more years after an election ($j = 2$).\footnote{A few constituencies in the data had an electoral cycle longer than five years in the data, so most dummies for 2 or more years before/after an election precisely indicate 2 years. For example, Jammu \& Kashmir held elections in 2002, 2008, and 2014, with a six-year gap between each election. Approximately 1.4\% of the school-year observations are three or more years from an election. In those cases, I code them as being either 2 or more years before/after an election.} For example, if a school is in a constituency that held an assembly election in 2010, $e_{c}$ = 2010. In the year 2011 ($t$ = 2011), the dummy on 1 year after an election is 2011 - 2010 will equal 1, and all other distance to election dummies will equal 0. The election year ($j$ = 0) serves as the reference category.
+
+The model also includes school and year fixed effects, $\gamma_{i}$ + $\zeta_{t}$.  These fixed effects control for unobserved national-level trends, as well as any unobserved school-specific characteristics.  Finally, I include a lag of the dependent variable, $y_{i,t-1}$ to explicitly model the temporal dependence of the data as absenteeism in one year is likely influenced by earlier absenteeism.  I am also concerned about the presence of serial correlation in the data, although I also show models excluding the lag term.  I run the analyses on two sets of outcomes: whether there is any absence in a school in a year, and the log total number of absences in a school.  We can think of these two sets of results as the extensive and intensive margins respectively.
+
+The identification of the effect of each distance to election year dummy, $\alpha_{j} \cdot \mathbbm{1}\{ j = t - e_{c}\}$, relies on the staggered and repeated timing of state elections across the states in my sample.  Elections at the state level are held approximately every five years, and the effect of elections on schools is identified by comparing the same school in election and non-election years across multiple election cycles, controlling for time-invariant school characteristics with $\gamma_{i}$ and time-variant conditions with $\zeta_{t}$. This leverages within-school variation, assuming that controlling for time and school invariant trends, the effect of each year is identified as the only difference between different values of $j$.
+
+The primary threat to identification is if a school is systematically different between election and non-election years for reasons \emph{independent} of the election (for example, schools receive a windfall of resources at the end of a legislative session as budgets have to be spent down).  I capture these changes through the year fixed effects, $\zeta_{t}$, in the model.
+
+\section*{Results}
+
+I provide summary statistics for the two sources of data in this paper, a school-level panel from the District Information System for Education (DISE) from 2006-2018 and the 2011-2012 round of the Indian Human Development Survey (IHDS) in Table \ref{table:summarystatistics}.
+
+Although I use fewer variables from the DISE data (Panel A in Table \ref{table:summarystatistics}), there are significant differences across all variables between private and public schools.  First, private schools are larger, with 4 more teachers in each school in the DISE data and 60 more students and 3 more teachers in each school in the IHDS data (Panel B in Table \ref{table:summarystatistics}).  Teachers in private schools are 12 percentage points less likely to be absent, private schools are more likely to be located in cities, and private schools are also likely to be larger. The size of government and private schools between the IHDS and DISE datasets are remarkably similar, suggesting that IHDS does not sample from a particular type of school when looking at private or government schools.  Most schools in the sample are also rural and government schools, consistent with the distribution of schools in India.  There are few teacher-level differences between government and private schools other than that private school teachers are likely to be of higher caste status than their government school counterparts, with private school teachers more likely to be upper caste and not Hindu or Muslim, suggesting schools that both cater to economic elites and religious minorities (Panel C in Table \ref{table:summarystatistics}).
+
+At the student level, test scores are universally higher for private schools, likely a reflection of selection into private education (Panel D in Table \ref{table:summarystatistics}).  Students in private schools are ten percent more likely to be boys, and they are also more likely to have a teacher drawn from the local community, suggesting a different composition of teachers and students.  The nature of testing did not select for older students, however, with most of the students taking tests about ten years old and in the third grade.
+
+Next, I turn to the specification and results from Equation \ref{equation:businesscycle}.  Panel A in Figure \ref{fig:gextensiveakhmedov} reports whether there is any reported absenteeism in a school-year, and Panel B reports the log number of average absences per teacher.  The results in Figure \ref{fig:gextensiveakhmedov} make the nature of the electoral cycle clear. Taking Panel A, absenteeism decreases by \input{data/output/text/preelectionpointestimategovernment.tex}percentage points the year before an election and increases by \input{data/output/text/postelectionpointestimategovernment.tex}percentage points the year immediately after an election from the election year mean of \input{data/output/text/electionyearmean.tex} percent. The point estimate on one year before the election is significant, confirming that teachers are less likely to be absent in the year before elections.  While the first-year post-election point estimate is not different from the election year mean, it is different from the point estimate for the year before the election, suggesting higher levels of absenteeism the year after the election relative to the year before the election.  The results are substantively identical for the logged average number of absences per teacher presented in Panel B of Figure \ref{fig:gextensiveakhmedov}.  In short, teacher absenteeism is significantly lower immediately before elections, and higher immediately after elections providing empirical support to one observable implication of a dynamic relationship with varying benefits and costs to sanctions -- teachers are more likely to show up for work before elections when electoral incentives for politicians are salient, and less likely to show-up after elections when electoral incentives are weak.  Results are robust to different specifications and lower in government schools in the year before an election (see Appendix \ref{appendixsection:alternativespecifications}).
+
+\begin{figure}[htbp]
+\caption{Absence Over the Electoral Cycle in Government Schools\label{fig:gextensiveakhmedov}}
+\centering
+\begin{minipage}{\textwidth}
+    \includegraphics[keepaspectratio = true]{data/output/figures/anyabsencecyclegovernment.pdf}
+    \tiny
+    \emph{Notes:} In Panel A, the dependent variable is a dummy variable that takes the value of one if a school reports any teacher absenteeism in that year. In Panel B, the dependent variable is the log number of absences per teacher.  The regression includes controls for the number of teachers in a school, a dummy for whether the school is in a rural area, and year and school fixed effects.  The line represents 95\% confidence intervals with standard errors clustered at the electoral constituency-year level.  There are \input{data/output/text/nobsgovernment.tex} school-year observations and \input{data/output/text/nschoolsgovernment.tex} total schools in Panel A, and \input{data/output/text/nobsgovernmentlog.tex} school-year observations and \input{data/output/text/nschoolsgovernmentlog.tex} total schools in Panel B.  The election year mean is \input{data/output/text/electionyearmeandummycyclegovernment.tex} for Panel A and \input{data/output/text/electionyearmeanlogcyclegovernment.tex} for Panel B.  Panel A corresponds to Column 9 in Table \ref{appendixtable:gextensiveakhmedov} and Panel B corresponds to Column 9 in Table \ref{appendixtable:gintensiveakhmedov}.\\
+    \emph{Data Source:} District Information System of Education School Report Cards, 2006-2018.
+\end{minipage}
+\end{figure}
+
+I partially replicate the election cycle analysis from Equation \ref{equation:businesscycle} using data from IHDS.\footnote{It is important to note that the IHDS only provides a cross-section of schools in the year the survey was conducted, so I am unable to include school or year fixed effects. As a result, the full identification assumptions are violated if there are school- or year-level idiosyncrasies in the year the IHDS survey was conducted that are correlated with the school's proximity to an election.}  In Figure \ref{fig:yearlycycle}, I present results for the event study model using IHDS data for absenteeism and official work.  The results using self-reported data from the DISE panel data and the IHDS independent audit data are consistent with each other.  In both data sources, there are strong effects of the electoral cycle, with teachers more likely to be absent from the school the further we move from the election.  Teachers in government schools have a \input{data/output/text/meanabsenceihds.tex}percent probability of being absent from school on the day of the IHDS survey, and this increases to \input{data/output/text/twoyearelectionmeangovernmentabsenceihds.tex}percent more than two years from the election on either side (Panel A of Figure \ref{fig:yearlycycle}).
+
+\begin{figure}[htbp]
+\caption{Absence Over the Electoral Cycle in Government Schools\label{fig:yearlycycle}}
+\centering
+\begin{minipage}{6.5in}
+    \includegraphics[keepaspectratio = true]{data/output/figures/absencecycleihds.pdf}
+    \tiny \emph{Notes:} The dependent variable in Panel A is a dummy variable that takes the value of one if the teacher was absent from the school on the day of the survey, while in Panel B the dependent variable is a dummy variable that takes the value of one if, conditional on being absent, the teacher was on official duty on the day of the survey.  The lines represent 95\% confidence intervals with standard errors clustered at the district-year level. Both panels run the model in Equation \ref{equation:businesscycle} without school and year fixed effects.  There are \input{data/output/text/samplesizegovernmentabsenceihds.tex} teacher observations in government schools and \input{data/output/text/samplesizegovernmentdutyihds.tex} teachers absent on the day of the survey. The election year mean level of absence is \input{data/output/text/electionmeangovernmentabsenceihds.tex} in government schools.  This figure corresponds to columns 1 \& 2 in Table \ref{table:ihdsabsencecyclegovernment}.  Both models control for gender, age, religion, caste, and the distance the teacher lives from the school.\\
+    \emph{Data Source:} Indian Human Development Survey - II.
+\end{minipage}
+\end{figure}
+
+The IHDS survey also asks school respondents if a teacher is absent because they are working on official duty administering the decennial census or as a poll booth month on the day of the survey. Exploring absence for official work first allows us to explore if schools are ``cooking the books'' for absenteeism and are more likely to mark teachers as absent for official work in particular years.  Second, it allows us to see whether teachers engage in a greater amount of work and sanctioned absence during election years.  Finally, it allows us to separate \emph{bureaucratic} pressure -- which should lead to a greater level of absenteeism in an election year as the electoral bureaucracy, independent of political actors, would pressure teachers to be more absent in election years -- from \emph{political} pressure, which should reduce absenteeism in election years. Teachers often lament that their time is taken up by official work, comparing themselves to postal workers who move paper from one destination to another \citep{Aiyar2016}, and that this work increases in election years as they are required to engage in preparing election booths that are often located in schools \citep{Neggers2018}. I leverage this question to explore whether teachers are more likely to be absent for government-sanctioned purposes in an election year in Panel B of Figure \ref{fig:yearlycycle}.
+
+We observe a similar electoral cycle than we do in \ref{fig:gextensiveakhmedov} and Panel A of \ref{fig:yearlycycle}: teachers are more likely to be absent on official government duty outside of election years. Teachers are between 5 and 12 percentage points less likely to be absent for official work around elections.  This provides further evidence that the reduced absenteeism we see in \ref{fig:gextensiveakhmedov} and Panel A of \ref{fig:yearlycycle} is despite any potential increased absenteeism for official work.  We see increased absenteeism outside of the electoral period even while formal demands on a teacher's time outside of school should be increasing around elections.
+
+If these results are indicative of relationships between politicians and public sector teachers, we should not see similar results for private schools as politicians do not exert the same level of control on private schools as they do government schools.  Otherwise, if results are similar, this would be suggestive of other effects specific to election years I am unable to identify with this data.
+
+\subsection*{Absence in the Private Sector}
+
+I repeat the analysis in Equation \ref{equation:businesscycle} for the subset of private schools in the data and present results in Figure \ref{fig:pextensiveakhmedov}.  There are no significant differences in absenteeism in any year of the electoral cycle and no pattern of absenteeism over the election cycle.  Absenteeism is significantly lower in private schools than in private schools in all specifications, with an election year mean of \input{data/output/text/electionyearmeandummycycleprivate.tex}\ percent, and point estimates approximately three times smaller.
+
+\begin{figure}[htbp]
+\caption{Absence Over the Electoral Cycle in Private Schools\label{fig:pextensiveakhmedov}}
+\centering
+\begin{minipage}{6.5in}
+    \includegraphics[keepaspectratio = true]{data/output/figures/anyabsencecycleprivate.pdf}
+    \tiny \emph{Notes:} In Panel A, the dependent variable is a dummy variable that takes the value of one if a school reports any teacher absenteeism in that year. In Panel B, the dependent variable is the log number of absences per teacher. The regression includes controls for the number of teachers in a school, a dummy for whether the school is in a rural area, and year and school fixed effects.  The line represents 95\% confidence intervals with standard errors clustered at the electoral constituency-year level.  There are \input{data/output/text/nobsprivate.tex} school-year observations and \input{data/output/text/nschoolsprivate.tex}. The election year mean is \input{data/output/text/electionyearmeandummycycleprivate} in Panel A and \input{data/output/text/electionyearmeanlogcycleprivate.tex} in Panel B.  Panel A corresponds to Column 9 in Table \ref{appendixtable:pextensiveakhmedov} and Panel B corresponds to Column 9 in Table \ref{appendixtable:pintensiveakhmedov}.\\
+    \emph{Data Source:} District Information System of Education School Report Cards, 2006-2018.
+\end{minipage}
+\end{figure}
+
+The results from Figure \ref{fig:pextensiveakhmedov} suggest that there is no absenteeism election cycle in private schools as there is in government schools.  Expanding the specifications to include and exclude school and year fixed effects in Table \ref{appendixtable:pextensiveakhmedov} shows that these specifications are not sensitive to modeling choices.  This provides further support for a dynamic relationship and the third observable implication that we should not see an absenteeism cycle in private schools. The lack of an electoral cycle in absenteeism in private schools provides support for a channel that runs from politicians to \emph{government} schools and that politicians cannot credibly pressure teachers in private schools to show up for work around elections in the way they can for government school teachers.  This is most likely because they cannot credibly sanction teachers in private schools through transfers.
+
+In Figure \ref{fig:yearlycycleprivate}, I repeat the analysis from Figure \ref{fig:yearlycycle} for private school teachers using the IHDS data. Lending support to political attention turning solely to government schools, results in private schools are not significant across the electoral cycle.  Teachers in private schools are no more or less likely to be absent for official work the further we move from an election, and like the results for government schools using IHDS data, the point estimates are also smaller, estimating precise nulls. Results between the DISE census and IHDS audits are similar for private schools.  The rate of absenteeism in private schools is much lower than in government schools, and there is little evidence of an electoral cycle in private schools.
+
+\begin{figure}[htbp]
+\caption{Absence Over Electoral Cycle in Private Schools\label{fig:yearlycycleprivate}}
+\centering
+\begin{minipage}{6.5in}
+    \includegraphics[keepaspectratio = true]{data/output/figures/absencecycleprivateihds.pdf}
+    \tiny \emph{Notes:} The dependent variable in Panel A is a dummy variable that takes the value of one if the teacher was absent from the school on the day of the survey, while in Panel B the dependent variable is a dummy variable that takes the value of one if, conditional on being absent, the teacher was on official duty on the day of the survey.  The lines represent 95\% confidence intervals with standard errors clustered at the district-year level. Both panels run the model in Equation \ref{equation:businesscycle} without school and year fixed effects.  There are \input{data/output/text/samplesizeprivateabsenceihds.tex} teacher observations in private schools and \input{data/output/text/samplesizeprivatedutyihds.tex} teachers absent on the day of the survey. The election year mean level of absence is \input{data/output/text/electionmeanprivateabsenceihds.tex} in private schools.  This figure corresponds to columns 1 \& 2 in Table \ref{table:ihdsabsencecycleprivate}.  Both models control for gender, age, religion, caste, and the distance the teacher lives from the school.\\
+    \emph{Data Source:} Indian Human Development Survey - II.
+\end{minipage}
+\end{figure}
+
+Leveraging the independent audits from the IHDS also suggests that teachers and headmasters are unlikely to be ``cooking the books'' and systematically forging data around elections.  Using data from an independent school-level survey, I find remarkably similar results to those from a national census of Government and registered private schools.  Teachers in government schools are between 10 and 15 percentage points more likely to be absent from schools on the day of the unannounced school-level survey the further we move from an election.  Similar to the national-level census of schools, I do not observe these patterns in private schools.
+
+Results across two sources of data, one systematic and repeated that allows us to fully estimate the effects of elections, and one random and unannounced that allows us to better measure the dependent variable, are consistent between them. Absenteeism in government schools exhibits an electoral cycle in which absenteeism is lower closer to elections and higher further from elections. Repeating the analysis in private schools shows no electoral cycle for private schools, suggesting that the channel runs through the control that politicians can exert on government employees. The independent audit suggests that this channel is not through exerting pressure on the data collection apparatus of the state, but teachers themselves.
+
+\subsection*{Testing Two Alternative Channels: Bureaucratic Effort and Parental Monitoring}
+
+So far, I have shown there are strong electoral cycles in teacher absenteeism in government schools in India.  Absenteeism decreases in the year before an election and is higher in the year after an election.  These effects are not found in the private sector, suggesting political control of the public sector bureaucracy, confirming the first three observable implications. In this section, I test the final observable implication: that the channel runs through \emph{elected politicians}, and while other actors can hold teachers accountable, they will not demonstrate an electoral cycle in doing so. If this is the case, we should not see increased monitoring by the mid-level bureaucracy or increased monitoring by parents.
+
+I use the number of visits by cluster and block resource coordinators as a dependent variable to see if higher-level bureaucratic effort varies over the electoral cycle.  Cluster and block resource coordinators report to the DEO and the mid-level bureaucrats between schools and the district level tasked with ensuring administrative and pedagogical compliance.  If we were to see a greater number of visits by these two groups, it would suggest the channel operating through DEOs putting greater pressure on their subordinates to then hold teachers to account.  In the second channel, I test whether there are a greater number of School Management Committee (SMC) meetings in schools.  SMCs are school-level bodies comprised of parents empowered to raise issues and hold local schools accountable in election years, including limited jurisdiction over hiring teachers on short-term contracts, suggesting permanent civil service teachers for transfers, and otherwise surfacing other issues with schools to higher-level state representatives.  To test these two channels, I replicate Equation \ref{equation:businesscycle} using either the number of visits by cluster and block resource coordinators or the number of SMC meetings held in a school in a year as the outcome.
+
+In Panel A of Figure \ref{fig:alternativechannels}, I use the number of visits by cluster and block resource coordinators, and in Panel B I use the number of school management committee (SMC) meetings as the dependent variable in the event study model. In both specifications, I find no effect of the electoral cycle on these two potential forms of monitoring, with small and null point estimates across all the years of the electoral cycle.
+
+\begin{figure}[htbp]
+\caption{Bureaucratic Visits and SMC Meetings Over Electoral Cycle in Governments Schools\label{fig:alternativechannels}}
+\centering
+\begin{minipage}{6.5in}
+    \includegraphics[keepaspectratio = true]{data/output/figures/alternativechannels.pdf}
+    \tiny \emph{Notes:} The dependent variable in Panel A is the number of visits made by cluster and block resource coordinators to the school in a year, while in Panel B the dependent variable is the number of SMC meetings in the school in a year. The regression includes controls for the number of teachers in a school, a dummy for whether the school is in a rural area, and year and school fixed effects.  The line represents 95\% confidence intervals with standard errors clustered at the electoral constituency-year level.  There are \input{data/output/text/nobsadministrative.tex} school-year observations and \input{data/output/text/nschoolsadministrative.tex}. The election year mean is \input{data/output/text/electionyearmeanadministrative.tex} in Panel A and \input{data/output/text/electionyearmeansmc.tex} in Panel B.  Panel A corresponds to Column 9 in Table \ref{table:administrative} and Panel B corresponds to Column 9 in Table \ref{table:smc}.\\
+    \emph{Data Source:} District Information System of Education School Report Cards, 2005-2018.
+\end{minipage}
+\end{figure}
+
+Together, I find that absenteeism in government schools significantly decreases in the year before an election and is higher, although not significant in the year after an election (Figure \ref{fig:gextensiveakhmedov}).  We see no similar cycles in private schools (Figure \ref{fig:pextensiveakhmedov}), suggesting that whatever is driving these cycles only operates in the public sector, and I take this as suggestive evidence that there is a relationship between politicians and public sector teachers to reduce absenteeism before elections and reduce sanctioning after elections.  I then test four alternative explanations that have been suggested as plausible other ways that elections could impact public service quality, including the competitiveness of an election, the political alignment between the politician in power in a constituency and the party in power at the state level, increased bureaucratic effort, and increased parental effort.  I find no support for any of these explanations (Figure \ref{fig:alternativechannels}).  It is important to note that I am unable to directly test whether other societal groups outside of SMCs, namely women's associations \citep{Dreze2001, Mangla2021}, that have been shown to monitor schools increase their monitoring efforts around elections and this is a limit of my administrative data.  The measure of SMC monitoring is likely picking up some of the efforts of other societal actors, but absent data on these informal monitoring networks, I cannot test this directly.
+
+Finally, I have argued and shown that the relationship of accountability operates through \emph{elected politicians} rather than mid-level bureaucrats or parents.  While politicians can lean on mid-level bureaucrats to put pressure on bureaucrats, much of the increase in pressure should come from politicians themselves.  Mid-level bureaucrats\footnote{Interview with M. Somi Reddy, District Education Officer, Ranga Reddy District, Andhra Pradesh, September 2013.} and voters \citep{Snavely2001},\footnote{Field observations, Ranga Reddy District, Andhra Pradesh, October 2013.} suggested that politician effort on these fronts was often more visible around elections.  Both of these groups are not subject to one part of the varying costs and benefits of the relationship the way politicians and teachers are. Mid-level bureaucrats are not subject to electoral pressures and therefore are not rewarded or punished for improved effort and performance around elections -- at least not directly.  Parents cannot directly sanction teachers with transfers, so do not have a credible threat of punishment in any period.
+
+\section*{The Benefits of Reduced Absenteeism}
+
+A second-order question is if there are downstream consequences of reduced absenteeism for governance and students or if this is an example of ``performative governance'' where bureaucrats exert effort to appear to be working, but there are no material changes in outcomes \citep{Ding2020}.  For students, the increased attendance of teachers would suggest greater instructional time and potentially higher levels of learning.  For the state, increased attendance would also result in decreased leakage in spending as teachers are paid for the time in the classroom, rather than time absent from work.  Here, I test whether increased attendance from teachers results in higher test scores as well as calculate the fiscal recovery from decreased absenteeism in election years.
+
+\subsection*{Effects on Students}
+
+The IHDS survey tests a smaller subset of students using basic literacy, numeracy, and reading comprehension tests.  I leverage this data to test if test scores exhibit a similar electoral cycle in government and private schools as we do for absenteeism.  I run a reduced-form model of the effect of the electoral cycle on test scores.  This replicates the analysis for Figures \ref{fig:gextensiveakhmedov} and \ref{fig:pextensiveakhmedov}, replacing absenteeism with test scores.  I present these results in Figure \ref{figure:testscorecycle}.
+
+\begin{figure}[htbp]
+\caption{Test Scores Improve in Election Years for Government School Students Relative to Non-Election Years but Not in Private Schools\label{figure:testscorecycle}}
+\centering
+\begin{minipage}{6.5in}
+    \centering
+    \includegraphics[width = 6.5in, height = 6in]{data/output/figures/testscorecycle.pdf}
+    \tiny
+    \flushleft
+    \emph{Notes:} This figure reports the effects of electoral cycles on test scores using IHDS test data. I run results for test scores overall, and four reading, math, and writing comprehension separately.  The overall scores are a sum of the other three scores, while each score is rescaled from 0 to 1.  For reading, a child is scored as unable to read, able to read letters, words, paragraphs, or an entire story. In math, a child is scored as unable to recognize a number, whether they can recognize a number, whether they can subtract to one-digit numbers, or whether they can divide a two-digit number by a one-digit number.  For writing, a child is scored by whether they cannot write, can write a paragraph with two mistakes or fewer, or can write with no mistakes.  All models include controls for the child's age, gender, class, and whether their teacher lives in their village.  Panel A presents results for test scores for children who attend government schools.  Panel B presents results for test scores for children who attend private schools.  I present the regression tables for these results in Table \ref{table:testscorecycle}.
+\end{minipage}
+\end{figure}
+
+A clear pattern emerges with test scores that mirror the pattern we see for teacher absenteeism.  For government schools, test scores are significantly lower in the years before and after the election year for all subjects tested.  For private schools, test scores do not exhibit a similar pattern.  These results suggest that there is a translation from increased teacher attendance in schools and student learning.  As government school teachers are subject to pressures from politicians around elections, they are more likely to show up and teach students, who then perform better on independently administered tests.
+
+\subsection*{Effects on State Finances}
+
+Next, I conduct a back-of-the-envelope calculation of the lower and upper ranges of what the decrease in absenteeism means for the fiscal purse.\footnote{I provide full details of these calculations in Appendix \ref{appendixsection:fiscalcost}}  I take the highest and lowest average monthly teacher salary from two other studies that have calculated teacher wages across India.  In \cite{Muralidharan2016}, they calculate the average monthly wage of a government school teacher in India to be \rupee\input{data/output/text/highwage.tex} (approximately \$455 USD), and in \cite{Kingdon2010}, they calculate the average monthly wage to be \rupee\input{data/output/text/lowwage.tex} (approximately \$217 USD).\footnote{\cite{Muralidharan2016} and \cite{Kingdon2010} each calculated average government teacher wages across India in 2010, but the large differences in their estimates likely emerge from their respective sampling and estimation methods.  \cite{Muralidharan2016} rely on survey-based estimates from a sample of states across India, whereas \cite{Kingdon2010} rely on reported wages from the National Sample Survey (NSS) of India, a nationally representative survey of the country. While the higher estimates in \cite{Muralidharan2016} could be subject to desirability and sample biases, the lower estimates in \cite{Kingdon2010} could be subject to difficulties in correctly identifying full-time government school teachers as opposed to other employees that also work in schools and are paid less than full-time teachers.}  The highest point estimate in Figure \ref{fig:gextensiveakhmedov} estimates a decrease in absenteeism of 1.5 days per government school between two years after an election and an election year.  Taken together, this results in a fiscal recovery of between approximately \$\input{data/output/text/wagerecoveryhighdollar.tex} and \$\input{data/output/text/wagerecoverylowdollar.tex} USD per year, or \input{data/output/text/sharebudget.tex}\% of the total budget lost to absenteeism per year.  This recovery is comparable to policy interventions that directly attempt to reduce absenteeism (see \cite{Duflo2012a}).  The question for policy then becomes how we can extend the increase in attention to education quality from election years to all years.
+
+\section*{Conclusion}
+
+Looking to explain the chronic rates of absenteeism in public services, I have argued and shown that front-line service workers and politicians are in a dynamic relationship with benefits and costs to taking action on sanctions for politicians that vary over time. When electoral incentives are salient for politicians, they use the threat of sanctions to encourage teachers to show up for work. They are less likely to lean on these threats when electoral incentives are less salient.
+
+Combining school-level data on the universe of schools in India matched to the timing of state-level assembly elections in India, I have shown that there is a strong and persistent electoral cycle to absenteeism in government schools.  While reported rates of absenteeism are lower in this data than independent audits, approximately 14 percent of schools report some absenteeism in any given school year, and an average of \input{data/output/text/meanabsence.tex} teaching days are lost to absenteeism yearly in each school.  These numbers decline significantly in election years.  The probability of any absence and the total number of days lost to absenteeism declines by \input{data/output/text/preelectionpointestimategovernment.tex}percentage points in a government school in the year before an election.  These results are robust to the choice of identification strategy, how I measure absenteeism, and the data source. All specifications show remarkably similar electoral cycles in absenteeism.  There is no evidence for a similar electoral cycle in absenteeism in private schools, pointing to a relationship between politicians and \emph{public sector} teachers.
+
+I find no evidence of an electoral cycle in mid-level bureaucratic effort or parental effort These null results further point to interactions between individual-level political candidates and teachers in their constituency, rather than engaging the mid-level bureaucracy or increased activism by parents around elections. I have argued that these two channels do not exhibit inter-temporal tradeoffs in their return on effort -- either the costs or benefits of a bureaucrat or citizen group attempting to hold front-line functionaries to account are constant over time.  While parents can theoretically expect their voice to be heard most during an election, so the benefits to taking action over time do vary, the \emph{cost} of absenteeism exists for parents whether there is an election or not. Likewise, for bureaucrats, the return to effort combating absenteeism is likely to be greater around elections as politicians will also focus their attention then, but it is likely an intrinsically motivated bureaucrat that would take action around elections \emph{and} at all times to reduce absenteeism. The lack of bottom-up pressure from service recipients and top-down pressure from mid-level bureaucrats likely goes a long way in explaining the low baseline levels of front-line functionary performance and high levels of absenteeism.
+
+A scope condition of this argument is that these relationships are only likely with front-line functionaries. The dynamic relationship is contingent on a level of autonomy of the agent that allows them to impose costs on principals. In this case, teachers are autonomous political actors that can openly support or oppose politicians during elections.  We are unlikely to see smaller bureaucracies that have often been the object of study in political science like mid-level bureaucrats \citep{Dasgupta2020, Gulzar2017}, or civil service officers \citep{Bhavnani2019}, in similar relationships as they do not pose a credible \emph{electoral} threat to politicians. While some of these bureaucrats are organized in interest groups,\footnote{For example, officers of the Indian Administrative Service have a staff association that can lobby for preferred policies, but they are small in number and do not engage in electoral politics in the same way that teachers unions do (Nair, Remya, Mayank Aggarwal, and Yogendra Kalavalapalli. October 30, 2015. ``IAS officers get pay commission jitters.'' \emph{Mint}. Accessed July 14, 2021).} they lack the numbers and geographical spread of front-line functionaries, do not regularly interface with voters, and are not as influential within their communities.  Unlike teachers, their relationship with elected politicians would be episodic and related to specific policy outcomes, not everyday working conditions such as absenteeism.
+
+More generally, the full range of politics of front-line functionaries remains understudied in political science. Taken together, Indian teachers are likely one of the biggest single sources of employment in India. In contrast to other employment sources, teachers operate in a relatively flat hierarchy, with little wage and role differentiation between a starting position and an end-of-career teacher.  Better understanding the broad range of ways that front-line functionaries enter and engage in the political process beyond just an interest group is a ripe area for study in political science. As a result, teachers and other front-line functionaries should hold a distinct place in our theorizing on the politics of the bureaucracy as a result.
+
+The question for policymakers is how to extend the effects we see in election years to non-election years. Policy and scholarly attention is turning to managerial interventions that can address the political economy constraints of poor public sector performance in low- and middle-income countries \citep{Bertelli2020}. The findings from this paper have two potential policy implications.  First, joining work on the porous borders between politicians and low-level bureaucrats \citep{Mangla2015a}, the findings suggest that reducing the ability of politicians to interfere in the functioning of the low-level bureaucracy can have high returns for service quality.  While early developmental state literature focused on the idea of ``embedded autonomy'' and the ability of high-level bureaucrats to work free of political interference \citep{Evans1995}, the findings suggest embedded autonomy is equally important at lower levels of bureaucratic organization. This paper also joins other work in suggesting that an intervention with potentially high returns is investing in the mid-level bureaucracy that sits between the politician and the front-line functionary and is tasked with overseeing front-line functionaries \citep{Dasgupta2020, Muralidharan2016} or parents \citep{Altschuler2012,Ganimian2016a}. Of the three potential actors that can hold teachers accountable, only politicians exhibit differential effort over time. Mid-level bureaucrats and parents, who do not exhibit electoral cycles in their effort, have incentives to monitor teachers in \emph{all} years. Further facilitating these two channels has the potential for high returns for absenteeism, student learning, and the public purse.
+
+The paper leaves at least two questions unanswered that are ripe for further study.  First, what returns do \emph{politicians} receive from better educational quality?  Or, in other words, do voters reward politicians for an easily monitored aspect of service provision?  The answer from other contexts suggests that the returns are high \citep{Larreguy2017a}, but the findings could stand to be unpacked further.  Second, what returns do \emph{teachers} receive from working together with politicians?  Transfers are the rewards teachers receive for good performance.  Does this extend to rewarding teachers for delivering votes?  Again, evidence from a similar context suggests that teachers are rewarded around elections \citep{Fagernas2020}, but more work could be done to unpack these mechanisms.  More generally, political science has often approached the politics of teachers as an organized interest group \citep{Anzia2013, Moe2016, Murillo2004a}.  While teachers' unions are certainly powerful, the mundane day-to-day work of teachers also makes them valuable for politicians on two levels.  In the short run, they have intimate relationships with many voters and can encourage them to turn up to vote or even vote for certain candidates.  In the long run, they socialize students in the predominant state-building narratives, and for politicians with long time horizons, provide a valuable way to influence the political socialization of entire cohorts of future voters.  Researchers should take these smaller and more quotidian roles seriously in the same way we take the day-to-day work of brokers seriously.
+
+\clearpage
+
+\noindent \textbf{Supplementary Materials:} Additional supplementary materials can be found with the online version of this article.\\
+
+\renewcommand{\contentsname}{Supplementary Materials}
+\tableofcontents*
+
+\noindent \textbf{Data Availability:} Replication data for this paper can be found at \href{https://doi.org/10.7910/DVN/WSNNIE}{https://doi.org/10.7910/DVN/WSNNIE}\\
+
+\noindent \textbf{Acknowledgements:} I am grateful to Francisco Lagos, Sophie Litschwartz, and Fernanda Ram\'{i}rez-Espinosa for fantastic research assistance on this project. Andreas de Barros was instrumental in acquiring the school location data.  Comments from Rikhil Bhavnani, Poulomi Chakraborty, Louis Crouch, Aditya Dasgupta, Jane Gingrich, Saad Gulzar, Michael Hartney, James Pickett, Mashail Malik, Rabia Malik, Thibaud Marcesee, Gautam Nair, Guillermo Toral, Gilles Vernier, Torsten Figueiredo Walter, conference participants at the 2017 Annual Conference on South Asia, the 2018 Political Economy of Education Workshop at Nuffield College, the 2018 North-East Universities Development Consortium annual conference, and The Research on Improving Systems of Education Programme 2022 Annual Conference as well as three excellent anonymous reviewers at the \emph{British Journal of Political Science} have helped to greatly improve the paper.  The responsibility for all errors rests solely with me.\\
+
+\noindent \textbf{Financial Support:} None.\\
+
+\noindent \textbf{Competing interests:} The author declares none.\\
+
+\clearpage
+
+\nocite{Arel-Bundock2022, Arel-Bundock2024, Berge2018}
+
+\renewcommand\bibname{References}
+\bibliography{absence}
+\bibliographystyle{apsr}
+
+\clearpage
+
+\appendix
+
+\pagenumbering{arabic}% resets `page` counter to 1
+\renewcommand*{\thepage}{A\arabic{page}}
+\renewcommand\thefigure{A\arabic{figure}}
+\renewcommand\thetable{A\arabic{table}}
+\renewcommand\thesection{A\arabic{section}}
+\renewcommand\theequation{A\arabic{equation}}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+\setsecnumdepth{subsection}
+
+\section{Robustness to Different Measures of Election Timing}\label{appendixsection:alternativespecifications}
+
+A potential concern with my results is that the results might be sensitive to the specification of the functional form of election timing.  In this appendix, I re-estimate the results from Figures \ref{fig:gextensiveakhmedov} to \ref{fig:yearlycycle} using the number of years to the election instead of individual electoral cycle dummies.
+
+\subsection{Using A Continuous Measure of Distance to Elections}
+
+I run a regression using the number of years to the next election.  The formal equation takes the form:
+
+\begin{equation}
+    Y_{i,t} = \beta_{1}\text{Years to Next Election}_{i,t} + \beta_{2}y_{i,t-1} + Z_{i,t} + \gamma_{i} + \zeta_{t} + \mu_{i,t,d},\label{equation:continuous}
+\end{equation}
+
+where Years to Next Election$_{i,t}$ is a continuous variable that indicates the number of years school $i$ is to the next legislative election, and the rest of the equation is as in Equations \ref{equation:businesscycle}.
+
+I present results for government schools in Table \ref{appendixtable:yearstoelectiongovernment} and for private schools in Table \ref{appendixtable:yearstoelectionprivate}.  The results using a continuous measure of years to election are largely the same as other specifications, but it is important to note that the results for private schools are significant in all specifications that include lagged dependent variables (columns 1-4 and 6-9). The point estimates are between one-third and one-half smaller than those for government schools, suggesting that if any effect in this specification, it is smaller and weaker.
+
+\SingleSpacing
+\input{data/output/tables/anyabsencegovernmentyears.tex}
+\DoubleSpacing
+
+\SingleSpacing
+\input{data/output/tables/anyabsenceprivateyears.tex}
+\DoubleSpacing
+
+\clearpage
+
+\section{Calculating the Fiscal Cost of Absence}\label{appendixsection:fiscalcost}
+
+In this section, I calculate the total amount of money lost to absenteeism as a function of teachers' wages, and the total amount of money recovered in election years from the highest level of absenteeism.  Table \ref{appendixtable:fiscalcost} provides calculations of the estimate of how much money is lost and recovered between election and non-election years.
+
+\SingleSpacing
+\begin{table}[htbp]
+\begin{threeparttable}
+\caption{Calculating the Fiscal Recovery of Reduced Absenteeism\label{appendixtable:fiscalcost}}
+\begingroup
+\begin{tabular}{lrr}
+\toprule
+                                        & Highest Wage Estimate                                 & Lowest Wage Estimate \\
+\midrule
+Average Monthly Wage (\rupee)           & \input{data/output/text/highwage.tex}                 & \input{data/output/text/lowwage.tex} \\
+Average Daily Wage (\rupee)             & \input{data/output/text/dailyhigh.tex}                & \input{data/output/text/dailylow.tex} \\
+Average Absence per School (Days)       & \multicolumn{2}{c}{\input{data/output/text/meanabsence.tex}}                      \\
+Average Number of Teachers per Year     & \multicolumn{2}{c}{\input{data/output/text/teachers.tex}}                         \\
+Wages Lost in Average Year (\rupee)     & \input{data/output/text/wagelosshigh.tex}             & \input{data/output/text/wagelosslow.tex} \\
+Wages Lost in Average Year (\$)         & \input{data/output/text/wagelossdollarshigh.tex}      & \input{data/output/text/wagelossdollarslow.tex} \\
+Reduction in Absenteeism per School (Days)  & \multicolumn{2}{c}{\input{data/output/text/absencereduction.tex}} \\
+Wage Recovery in Year Before Election (\rupee) & \input{data/output/text/wagerecoveryhigh.tex}         & \input{data/output/text/wagerecoverylow.tex} \\
+Wage Recovery in Year Before Election (\$)     & \input{data/output/text/wagerecoveryhighdollar.tex}   & \input{data/output/text/wagerecoverylowdollar.tex} \\
+Share of Wages Lost Recovered (\%)      & \multicolumn{2}{c}{\input{data/output/text/sharebudget.tex}}                       \\ 
+\bottomrule
+\end{tabular}
+\endgroup
+\end{threeparttable}
+\end{table}
+\DoubleSpacing
+
+All costs in 2010 prices.  The high wage estimate is taken from \cite{Muralidharan2016} and the low wage estimate is taken from \cite{Kingdon2010}. The mean level of absence is the mean government school absence in the entire DISE dataset, and the average number of teachers per year is the mean number of teachers in the DISE dataset across all years.  The wages lost due to absenteeism in the average year in Rupees (\rupee) is the average daily wage multiplied by the mean number of absences and by the mean number of teachers.  The wages lost in USD Dollars (\$) divides the number by the exchange rate in 2010.  The reduction in absenteeism is calculated by taking the difference in the point estimates from ``1 Year After Election'' and ``1 Year from Election'' in Column 4 in Table \ref{appendixtable:gintensiveakhmedov}.  The wage recovery multiplies the reduction in absenteeism by the average daily wage and the average number of teachers, while the share of wages lost recovered divides the wage recovery by the wages lost.
+
+\clearpage
+
+\section{Consistency of Absence Measures Between Data Sources}
+
+I rely on two different measures of teacher absenteeism in the paper, the DISE School Report Cards that are self-reported by head teachers in schools, and the Indian Human Development Survey (IHDS) from 2011-12 that is independently collected by the National Council for Applied Economic Research through unannounced visits to schools.
+
+I compare these two measures to the measures from a third independently collected source, the data from \cite{Kremer2005}.  In Figure \ref{appendixfigure:absencecomparison}, I provide state-level scatter plots of the levels of absenteeism.  There is a strong positive relationship between measures in the DISE School Report Cards and the World Bank's from \cite{Kremer2005} (Panel A).  This relationship is stronger removing the outlier state of West Bengal from the DISE School Report Cards data.
+
+\begin{figure}[htbp]
+\caption{Consistency of Absence Measures Between Data Sources\label{appendixfigure:absencecomparison}}
+\centering
+\begin{minipage}{6.5in}
+    \includegraphics[keepaspectratio = true]{data/output/figures/absencecomparison.pdf}
+    \tiny \emph{Notes}: Panel A plots absence in DISE against absence in Table 2 of \cite{Kremer2005}.  Panel B plots absence in the 2011-12 round of the IHDS against absence in Table 2 of \cite{Kremer2005}.  Panel C plots absence in DISE against absence in the 2011-12 round of the IHDS. Each point represents the state-level average of the probability that an individual teacher was absent on the day of the school visit.  For the DISE SRC data, this represents the teacher-level absence per working day. 
+\end{minipage}
+\end{figure}
+
+The relationship is weaker between the IHDS and the other two measures, with a negative relationship for both measures (Panels B \& C), and null when removing West Bengal in the DISE School Report Cards (Panel C).
+
+\clearpage
+
+\section{``Cooking the Books'' or Reduced Absenteeism?}\label{appendixsection:ihdsdata}
+
+This paper uses rich administrative data to answer an important political problem.  While the use of administrative data is increasingly common \citep{Lindgren2016, Gulzar2017}, I do not take the quality of this data at face value. Instead, I verify the quality of the data by triangulating against independently collected sources \citep{Herrera2007}.  Administrative data suffers from the additional concern that bureaucrats have an incentive to misreport in ways that make their performance look better \citep{Martinez2022}, on top of all the data quality concerns of other sources of data.  Verified against other sources of data, however, administrative data provides great potential as it allows us to answer big questions at scale, especially as the data gathering capacity of states improves \citep{Jerven2013, Jensenius2017}.
+
+A concern with the self-reported nature of the DISE school report cards is that head teachers and district-level officers might be ``cooking the books'', or falsely reporting lower rates of absenteeism, around elections to make bureaucratic effort look greater with no underlying change in behavior.  The empirical evidence of ``cooking the books'' would be substantively similar -- lower absenteeism in election years -- although the mechanisms would be different -- perceived pressure to modify government data rather than hold providers accountable. Reported absenteeism of 12 percent in the DISE data and 14 percent in the IHDS data in Table \ref{table:summarystatistics} is lower than absenteeism in independent audits conducted in 2005 \citep{Chaudhury2006, Muralidharan2016}, suggesting either a secular decline in absenteeism or in the \emph{reporting} of absenteeism, suggestive evidence of ``cooking the books''.
+
+To separate whether schools are ``cooking the books'' or there is electoral pressure on teachers, I use the IHDS school surveys, an independent survey of schools conducted in 2011-2012 and contemporaneously to the DISE school report cards data collection to test whether I find similar patterns in this data.  The IHDS data collects a broad range of demographic and socioeconomic data, and also conducts a school survey of the largest private and government school in each village they survey households.  Visits to schools are otherwise unannounced and unexpected by school staff and replicate the randomized audits in \cite{Chaudhury2006}.
+
+I use the second wave of the Indian Human Development Survey (IHDS) for data on teacher absenteeism and reasons for absenteeism.  The IHDS survey is a nationally representative survey of 1,503 villages and 971 urban neighborhoods across India \citep{Desai2015}. The 2011-2012 round was the second round of a panel survey that surveyed the same villages in 2004-2005.  The survey asked a small number of questions about the largest government and private school in each surveyed village, and the next two largest schools, irrespective of whether they were public or private. For every teacher in the school, the surveyors checked if the teacher was present on the day of the survey, and, if they were absent, whether they were absent on officially sanctioned government work.  In this sense, the survey replicates the data collection in \cite{Chaudhury2006}, randomly auditing schools on staff absenteeism.
+
+In Table \ref{table:absenceschooltype}, I look at the probability that a teacher is absent from the school on the day of the survey, absent from the school on the day of the survey to conduct official work, or present at the school on the day of the interview and present for the interview as a function of whether their school is a government or private school.  As expected, teachers are four percentage points more likely to be absent from a government school (columns 1-2), and about two percentage points more likely to be absent for officially sanctioned duty (columns 3-4).  Given that government schools have fewer teachers (Panel C of Table \ref{table:summarystatistics}), conditional on being at the school teachers in government schools are also more likely to be present at the IHDS interview as there are likely fewer teachers to answer the survey and schools are smaller (columns 5-6).  These results confirm common sense expectations of what we think differences in teacher absenteeism should look like between government and private schools, with government schools showing consistently higher levels of absenteeism.
+
+\SingleSpacing
+
+\input{data/output/tables/ihdsabsencegovernment.tex}
+
+\DoubleSpacing
+
+Taking the DISE and IHDS data together, the two sources allow me to triangulate between two otherwise imperfect data sources \citep{Herrera2007}, and draw broader conclusions on the drivers of absence in Indian public service.  While the IHDS data effectively provides a randomized audit of a select number of government and private schools in the country, designed to be representative of the country as a whole, the DISE data allows me to generalize the results to \emph{all} schools in India.  The consistency in the results between the two sources provides support that the electoral cycles I discover are real and not the product of data quality, manipulation by teachers or school officials, or a result of self-reporting.
+
+A key question surrounding data quality is how self-reported data provided by organizations like DISE compare to independent evaluations of absence from random audits such as in \cite{Banerjee2006, Chaudhury2006}.  The levels of absence found in this paper are much lower than absence found by independent evaluations of service worker absenteeism from other papers in India.  Average levels of absence self-reported in the DISE dataset reach 13 percent for the \emph{year}, far shorter than the levels of absence recorded on random spot checks in \cite{Chaudhury2006} of 25 percent on any given day.  For education in India, the DISE data serves as the only comparable source of data available to the government and broader public, and is used by the former to assess the state of schools.  While the data is almost certainly biased downwards, it does have important implications for decision-making as this is the dataset used by policymakers.  Finding similar results in the IHDS data adds confidence that the self-reported data is not being systematically manipulated in election years and that we are seeing real decreases in absenteeism.  Across all specifications, results are comparable in direction between both sources of data.
+
+This is a larger problem for any study in the social sciences that relies on administrative data.  In contexts of low capacity, low attention, or poor measurement, the quality of this data may deviate from common sense understandings or reality.  This paper provides one path forward -- triangulate administrative data with other sources of high-quality data collected from other sources \citep{Herrera2007}.  The benefits of using administrative data are too great to simply ignore them, but we should be cautious in how we employ them and the conclusions we draw from them, ensuring that they are verified through other means.  I provide one way forward in this paper by independently verifying results from an administrative dataset against a second source of data collected by a different organization for a different purpose, with different incentives in data collection.  It provides one way forward for students of political science interested in employing large data moving forward.
+
+\subsection{Absenteeism in By-Elections}
+
+Another concern in cooking the books is that politicians and teachers could have time to coordinate around either actions or reporting on absenteeism before an election.  For example, politicians and district-level officers could coordinate to report lower levels of absenteeism in an election year ex-post by reporting lower levels of absenteeism after the election.
+
+If this were the case, we would see similar effects in elections on a regular five year cycle as well as by-elections, elections held because an MLA has had to step down, often because of a sudden death.  By-elections are held quickly often with only months of campaigning, but the winner serves the remainder of the term until the next election.  I can leverage by-elections to see if politicians are ``cooking the books'' with education officials as after the election they could alter levels of absenteeism.  Given the short campaign period and unexpected election timing, we should \emph{not} see an electoral cycle in absenteeism around by-elections if politicians are not cooking the books, but we should see one if they are cooking the books ex-post.
+
+Below, I also provide the same tables and figures I show in the main manuscript of all the by-election elections using data from DISE, and the election immediately preceding and following the by-election.  There are a much smaller number of by-elections and schools in constituencies holding by-elections (see the Footers to Tables \ref{appendixtable:gextensiveakhmedovbe}, \ref{appendixtable:gintensiveakhmedovbe}, \ref{appendixtable:pextensiveakhmedovbe}, and \ref{appendixtable:pintensiveakhmedovbe}). The standard errors for ``2 or more'' years to the next election are large as by-elections cut the time to the next election often to one year or less.
+
+\begin{figure}[htbp]
+\caption{Absence in a School Year over the Electoral Cycle in Government Schools During By-Elections\label{fig:gbeextensiveakhmedov}}
+\centering
+\begin{minipage}{6.5in}
+    \includegraphics[keepaspectratio = true]{data/output/figures/anyabsencecyclegovernmentbyelection.pdf}
+    \tiny \emph{Notes:} In Panel A, the dependent variable is a dummy variable that takes the value of one if a school reports any teacher absenteeism in that year. In Panel B, the dependent variable is the log number of absences per teacher. The regression includes controls for the number of teachers in a school, a dummy for whether the school is in a rural area, and year and school fixed effects.  The line represents 95\% confidence intervals with standard errors clustered at the constituency-year level.  There are \input{data/output/text/nobsgovernmentbe.tex} school-year observations and \input{data/output/text/nschoolsgovernmentbe.tex} in Panel A, and \input{data/output/text/nobsgovernmentbelog.tex} and \input{data/output/text/nschoolsgovernmentbelog.tex} total schools in Panel B. The election year mean is \input{data/output/text/electionyearmeandummycyclegovernmentbyelection.tex} in Panel A and \input{data/output/text/electionyearmeanlogcyclegovernmentbyelection.tex} in Panel B.  Panel A corresponds to Column 9 in Table \ref{appendixtable:gextensiveakhmedovbe} and Panel B corresponds to Column 9 in Table \ref{appendixtable:gintensiveakhmedovbe}.\\
+    \emph{Data Source:} District Information System for Education (DISE) School Report Cards.
+\end{minipage}
+\end{figure}
+
+If politicians were ``cooking the books'' ex-post, we would similar effects for by-elections as we do in the main set of results using the full set of elections. Politicians would be able to coordinate with education officials at the state or national level to change data, which we see no evidence of here. At the same time, given the constrained campaigning window in by-elections, which are often held within a couple of months after the election is declared, it adds confidence in the results as we should not expect politicians to be able to exert pressure over the entirety of a constituency within such a short time period.
+
+\begin{figure}[htbp]
+\caption{Absence in a School Year over the Electoral Cycle in Private Schools During By-Elections\label{fig:pbeextensiveakhmedov}}
+\centering
+\begin{minipage}{6.5in}
+    \includegraphics[keepaspectratio = true]{data/output/figures/anyabsencecycleprivatebyelection.pdf}
+    \tiny \emph{Notes:} In Panel A, the dependent variable is a dummy variable that takes the value of one if a school reports any teacher absenteeism in that year. In Panel B, the dependent variable is the log number of absences per teacher. The regression includes controls for the number of teachers in a school, a dummy for whether the school is in a rural area, and year and school fixed effects.  The line represents 95\% confidence intervals with standard errors clustered at the constituency-year level.  There are \input{data/output/text/nobsprivatebe.tex} school-year observations and \input{data/output/text/nschoolsprivatebe.tex} in Panel A, and \input{data/output/text/nobsprivatebelog.tex} and \input{data/output/text/nschoolsprivatebelog.tex} total schools in Panel B. The election year mean is \input{data/output/text/electionyearmeandummycycleprivatebyelection.tex} in Panel A and \input{data/output/text/electionyearmeanlogcycleprivatebyelection.tex} in Panel B.  Panel A corresponds to Column 9 in Table \ref{appendixtable:pextensiveakhmedovbe} and Panel B corresponds to Column 9 in Table \ref{appendixtable:pintensiveakhmedovbe}.\\
+    \emph{Data Source:} District Information System for Education (DISE) School Report Cards.
+\end{minipage}
+\end{figure}
+
+\input{data/output/tables/anyabsencecyclegovernmentbyelection.tex}
+
+\input{data/output/tables/logabsencecyclegovernmentbyelection.tex}
+
+\input{data/output/tables/anyabsencecycleprivatebyelection.tex}
+
+\input{data/output/tables/logabsencecycleprivatebyelection.tex}
+
+\clearpage
+
+\section{Matching Schools to Assembly Constituencies}\label{appendixsection:locationmatching}
+
+As the DISE school report card data does not identify which Assembly Constituency a school is located in, I use geographic information on the school to place the school in an Assembly Constituency.  This matching proceeded in four steps:
+
+\begin{enumerate}\itemsep -2pt
+    \item Using the precise location of the school
+    \item Using the location of the village in which the school is located
+    \item Using data from \cite{Adukia2019b} (AAN) to cross-reference unmatched schools to geographic locations
+    \item Using the postal pincode of the school to match the school to the Assembly Constituency
+\end{enumerate}
+
+I provide a further description of each step below, and a matching rate table in Table \ref{appendixtable:matchrate}.  The overall match rate for both public and private schools was \input{data/output/text/matchrate.tex}\%
+
+\SingleSpacing
+\begin{table}[h]
+\begin{threeparttable}
+\scriptsize
+\caption{Matching Rate by Matching Strategy\label{appendixtable:matchrate}}
+\centering
+\input{data/output/tables/matchratetable.tex}
+\begin{tablenotes}
+    \tiny \item \emph{Notes}: The Matching Strategy column identifies the strategy used to match schools to assembly constituencies.  The Remaining Unmatched columns report the number of schools left to match after all previous matching strategies, the Number Matched columns report how many schools were matched using that particular matching strategy, the Match Rate columns report the percentage of schools matched of all remaining schools left to match, and the Overall Match Rate columns report the percentage of schools matched by that strategy out of all the schools in the data set for government and private schools respectively 
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\DoubleSpacing
+
+\subsection{School GIS}
+
+The Government of India provides georeferenced information on many schools in India at \url{https://schoolgis.nic.in/}. I scraped the site and merged the locations with the DISE school report cards using the school code provided in each data set.  I then used a spatial join with Assembly Constituency shapefiles to identify the Assembly Constituency in which the school was located.
+
+\subsection{Village Codes}
+
+Next, the first nine digits of each school's school code identifies the village in which a school is located.  For unmatched schools located in a village with a matched school, I coded that school as located in the same assembly constituency.
+
+\subsection{\cite{Adukia2019b}}
+
+\cite{Adukia2019b} provide a crosswalk between DISE village codes and Census of India village codes.  For any remaining unmatched schools, I use the nine-digit DISE village code to match schools to Census villages.  Then, I use village-level shapefiles to spatially join villages to Assembly Constituencies, and code schools in the Assembly Constituency they are located.
+
+\subsection{Postal Pincodes}
+
+Finally, for the remaining unmatched villages, each school observation in the school report cards data reports the postal pincode in which the school is located.  I geo-reference these pincodes using Google Maps and take the centroid of the pincode.  Using the latitude and longitude of the centroid, I place this in Assembly Constituencies and code the school as being in that Assembly Constituency.
+
+\subsection{Differences Between Matched and Unmatched Schools}
+
+I then test for differences in matched and unmatched schools.  Figure \ref{appendixfig:matchingratetest} plots the differences in means. Given the large sample size and high match rate, most variables have significant differences, although their substantive sizes are small.  For example, rural schools are eight percent more likely to be matched, but given that \input{data/output/text/matchrate.tex}\% of schools are matched and of those, 86\% are rural, this means that 83\% of schools in the population are rural.  These differences are unlikely to lead to systematic bias in the results.
+
+\begin{figure}[htbp]
+\caption{Difference in Means Between Schools Matched to their Assembly Constituency and Unmatched Schools\label{appendixfig:matchingratetest}}
+\centering
+\begin{minipage}{6.5in}
+    \includegraphics[keepaspectratio = true]{data/output/figures/matchingratetest.pdf}
+    \tiny
+    \emph{Notes:} Each point estimate is a t-test of the difference between schools I was able to place in an assembly constituency and unmatched schools.  For continuous variables, variables are standardized to range from 0-1 by subtracting the mean value and dividing by two standard deviations \citep{Gelman2008a}. The plot is ordered from largest to smallest value.
+\end{minipage}
+\end{figure}
+
+\clearpage
+
+\section{Systematic Measurement Error}
+
+Given the lower levels of absenteeism reported in the DISE data relative to data collected independently by the World Bank in \cite{Chaudhury2006} and in the IHDS \citep{Desai2015}, the DISE data is likely to contain some level of measurement error. A greater concern for the identification strategy in this paper is if this measurement error and underreporting is systematic to the treatment and only occurs in pre-election years where there are greater incentives for politicians and education administrators to underreport absenteeism.
+
+Here, I explore how large the systematic measurement error would have to be to overturn the results in the paper. To do so, I conduct a placebo test where I replace the value of pre-election year, and only pre-election year, absenteeism to either the maximum or median observed at that school for a randomly sampled number of constituencies. To do so, I randomly sample between 10 to 100 constituencies in increments of 10 200 times each.  For every school within \{10, 20, 30, 40, 50, 60, 70, 80, 90, 100\} randomly sampled constituencies, I replace their pre-election absenteeism to either be 1 (for any absence reported), the median value observed in that school, or the maximum value observed in that school (Panels A, B, and C of Figure \ref{fig:placebotest} respectively). I randomly sample the \{10, 20, 30, 40, 50, 60, 70, 80, 90, 100\} constituencies 200 times each and take the mean of the point estimate and 95\% confidence interval in Figure \ref{fig:placebotest}.
+
+\begin{figure}[htbp]
+\caption{Placebo Test Increasing Schools within an Increasing Share of Constituencies\label{fig:placebotest}}
+\centering
+\begin{minipage}{6.5in}
+    \includegraphics[keepaspectratio = true]{data/output/figures/placebotest.pdf}
+    \tiny \emph{Notes:} The placebo test increases the pre-election year absenteeism for all schools in a given number of constituencies. The y-axis reports the number of randomly sampled constituencies in which all the schools have their pre-election year absenteeism replaced, increasing from 10 to 100 constituencies. I estimate Equation \ref{equation:businesscycle} 200 times for each level of constituencies, randomly sampling the number of constituencies that have their absenteeism increased without replacement. I present the mean value of the pre-election year point estimate from these 200 estimations. The dependent variable in Panel A is a dummy that takes the value of 1 if the school reports any absenteeism in a year and 0 otherwise. For the randomly sampled number of constituencies I set the pre-election year dependent variable to 1 for all schools. The dependent variable in Panels B and C is the logged number of absences in a school-year. In Panel B, for the randomly sampled number of constituencies, I set the pre-election year dependent variable to the within-school median. In Panel C, for the randomly sampled number of constituencies, I set the pre-election year dependent variable to the within-school maximum.\\
+    \emph{Data Source:} District Information System for Education.
+\end{minipage}
+\end{figure}
+
+For example if a school within a randomly sampled constituency reported absenteeism rates of \{12, 8, 6, \textcolor{red}{0}, 10, 9, 8, 10, \textcolor{red}{9}, 5, 7, 9\} (pre-election years in red), in the placebo test, the resulting values would be:
+
+\begin{enumerate} \itemsep -2pt
+    \item[Panel A:] {1, 1, 1, \textcolor{red}{1}, 1, 1, 1, 1, \textcolor{red}{1}, 1, 1, 1}
+    \item[Panel B:] {12, 8, 6, \textcolor{red}{8.5}, 10, 9, 8, 10, \textcolor{red}{8.5}, 5, 7, 9}
+    \item[Panel C:] {12, 8, 6, \textcolor{red}{12}, 10, 9, 8, 10, \textcolor{red}{12}, 5, 7, 9}
+\end{enumerate}
+
+There are between 800 to 1,000 constituencies that hold elections every year, so this represents between 1 to 12.5 percent of all constituencies in an election year. The strong assumption here is that if a politician is working with education officials to misreport absenteeism in the year before an election, they would misreport absenteeism for \emph{all} the schools in their constituency and the observed value was misreported from the highest possible value ever seen in that school.\footnote{This is a similar bounding exercise to Mansky bounds \citep{Horowitz2000a}.}  As constituencies hold an average of three elections in the data, I am setting the pre-election absenteeism rate for three sets of elections in these models. Panels A and C represent hard tests of the measurement error, assuming that \emph{all} the schools within the randomly sampled constituencies misreport absenteeism from the maximum possible value observed in the data, while Panel B presents an upper bound bounded by the median level reported in the school.
+
+In Panels A and C, between 20 and 30 constituencies have to misreport absenteeism (or between 2 to 4 percent of the data) and the misreported absenteeism has to be the maximum possible level of observed absenteeism in a school to make the results insignificant.  There is no number of constituencies that misreport absenteeism in Panel B that overturn the results. This represents a strict test and suggests that the level of measurement error would have to be high to overturn the results.
+
+\clearpage
+
+\section{Full Results Tables}
+
+This section provides the full results tables for the figures presented in Figures \ref{fig:gextensiveakhmedov} to \ref{figure:testscorecycle}.  The results for Panel A of Figure \ref{fig:gextensiveakhmedov} is presented in Column 9 of Table \ref{appendixtable:gextensiveakhmedov}.  The results for Panel B of Figure \ref{fig:gextensiveakhmedov} is presented in Column 9 of Table \ref{appendixtable:gintensiveakhmedov}.  Irrespective of the specification, we still see evidence of an electoral cycle in government schools, with point estimates ranging from 2.3 to 3.8 percentage point reduction in absenteeism in the years before elections.  The difference between the point estimate for one year before the election and one year after the election is also significant across all specifications.
+
+\SingleSpacing
+
+\input{data/output/tables/anyabsencecyclegovernment.tex}
+
+\input{data/output/tables/logabsencecyclegovernment.tex}
+\DoubleSpacing
+
+The results for Panel A of Figure \ref{fig:pextensiveakhmedov} are presented in Column 9 of Table \ref{appendixtable:pextensiveakhmedov}. The results for Panel B of Figure \ref{fig:pextensiveakhmedov} are presented in column 4 of Table \ref{appendixtable:pintensiveakhmedov}.  Columns 1 to 4 and 6 to 9 provide robustness checks to modeling choices with and without year and school fixed effects, and Columns 5 and 10 runs the analysis without the lagged dependent variable.  All specifications include a dummy for rural schools and columns 6 to 10 include the number of teachers in a school as a measure of the size of the school.  Columns 1 to 5 do not control for the number of teachers in the school in case politicians also manipulate the number of teachers in a school around an electoral cycle.  The results are substantively similar in all specifications.  Like the results in the main body of the paper, we do not see evidence of an electoral cycle in private schools.
+
+\SingleSpacing
+\input{data/output/tables/anyabsencecycleprivate.tex}
+
+\input{data/output/tables/logabsencecycleprivate.tex}
+\DoubleSpacing
+
+Table \ref{table:ihdsabsencecyclegovernment} presents the analysis from Panel A of Figure \ref{fig:yearlycycle} in Column 1, and Panel B of Figure \ref{fig:yearlycycle} in Column 2.
+
+\SingleSpacing
+\input{data/output/tables/ihdsabsencecyclegovernment.tex}
+\DoubleSpacing
+
+Table \ref{table:ihdsabsencecycleprivate} presents the analysis from Panel A of Figure \ref{fig:yearlycycleprivate} in Column 1, and Panel B of Figure \ref{fig:yearlycycleprivate} in Column 2.
+
+\SingleSpacing
+\input{data/output/tables/ihdsabsencecycleprivate.tex}
+\DoubleSpacing
+
+Table \ref{table:testscorecycle} presents the full results in Table form of Figure \ref{figure:testscorecycle}.
+
+\SingleSpacing
+\input{data/output/tables/ihdstestscores.tex}
+\DoubleSpacing
+
+\clearpage
+
+\subsection*{Full Results Tables for Administrative Visits}
+
+In Tables \ref{table:administrative} and \ref{table:smc}, I present the full set of results for the effects of the electoral cycle on administrative visits (Table \ref{table:administrative}) and SMC meetings (Table \ref{table:smc}).  Column 9 in both tables represents the results presented in Panels A and B of Figure \ref{fig:alternativechannels} respectively.
+
+\SingleSpacing
+\input{data/output/tables/administrative.tex}
+
+\input{data/output/tables/smc.tex}
+\DoubleSpacing
+
+\end{document}
