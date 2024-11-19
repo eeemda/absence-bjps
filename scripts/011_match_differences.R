@@ -1,5 +1,5 @@
 ###############################################################################
-# Name: 012_match_differences.R
+# Name: 011_match_differences.R
 # Author: Emmerich Davies <emmerich.davies@gmail.com>
 # Purpose: Checks for differences on observables for schools that were unmatched
 # in data
@@ -137,6 +137,13 @@ plot_matching_test <- dwplot(list_models,
     labs(x = "% Difference")
 
 ggsave(here("data/output/figures/matchingratetest.pdf"),
+    height = 8,
+    width = 6.5,
+    units = "in",
+    bg = "transparent"
+)
+
+ggsave(here("data/output/figures/matchingratetest.tiff"),
     height = 8,
     width = 6.5,
     units = "in",

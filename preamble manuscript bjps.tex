@@ -1,0 +1,97 @@
+\frenchspacing
+\usepackage{memoir-article-styles} %% in latex-custom-kjh/needs-memoir
+
+% Fonts
+\usepackage[american]{babel}
+%\usepackage{authblk} % Allows for listing of multiple authors
+\usepackage{fontspec} % Allows for the use of system fonts
+\setmainfont{Corundum Text OT}
+\usepackage[protrusion=true]{microtype} %Allows for the protusion of punctuation marks to allow for cleaner justification of text
+\usepackage[headings]{fullpage}
+
+\usepackage{standalone} % Allows for the standalone compilation of images.  Used so that sublime can provide previews of images and equations in document
+\usepackage{preview} % Allows for the preview of images and equations in sublime
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{natbib}
+\setlength\bibsep{0cm}
+\nobibintoc
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{rotating}
+
+% Fonts and typesetting
+\usepackage{bbm}
+
+% Table Packages
+\usepackage{tabularray}
+  \SetTblrStyle{foot}{font=\tiny}
+  \UseTblrLibrary{booktabs}
+\usepackage{longtable, tabu}
+\usepackage[flushleft]{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[group-separator={,}]{siunitx}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}% raggedleft column X 
+\newcolumntype{s}{>{\centering\arraybackslash\hsize=.45\hsize}X} % raggedleft column X (https://tex.stackexchange.com/questions/27971/tables-with-multiple-panels-in-latex-r-and-sweave)
+\newcommand{\tinytableTabularrayUnderline}[1]{\underline{#1}}
+\newcommand{\tinytableTabularrayStrikeout}[1]{\sout{#1}}
+\NewTableCommand{\tinytableDefineColor}[3]{\definecolor{#1}{#2}{#3}}
+\usepackage{etoolbox}
+\AtBeginEnvironment{talltblr}{\begin{SingleSpacing}}
+\AtEndEnvironment{talltblr}{\end{SingleSpacing}}
+
+% Figure Packages
+\usepackage{epsfig}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{xcolor}
+\usepackage{subfig}
+\usepackage{tfrupee}
+\usepackage[unicode]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[font=small,labelfont=bf]{caption}
+\let\newfloat\undefined
+\usepackage{floatrow}
+\floatsetup[table]{font=footnotesize, capposition=top}
+\floatsetup[figure]{capposition=top}
+
+% Cross-Reference Across Files
+\usepackage{xr}
+
+% Fixing microtype warnings
+\DeclareCharacterInheritance
+   { encoding = {TU,EU1,EU2},
+     family   = {Corundum Text OT} }
+   { A = {\`A,\'A,\^A,\~A,\"A,\r A,\k A},
+     a = {\`a,\'a,\^a,\~a,\"a,\r a,\k a},
+     C = {\'C,\c C},
+     c = {\'c,\c c},
+     D = {\DH},
+     d = {\dj},
+     E = {\`E,\'E,\^E,\"E,\k E},
+     e = {\`e,\'e,\^e,\"e,\k e},
+     I = {\`I,\'I,\^I,\"I},
+     i = {\`i,\'i,\^i,\"i,\i},
+     L = {\L},
+     l = {\l},
+     N = {\'N,\~N},
+     n = {\'n,\~n},
+     O = {\O,\`O,\'O,\^O,\~O,\"O},
+     o = {\o,\`o,\'o,\^o,\~o,\"o},
+     S = {\'S,\v S},
+     s = {\'s,\v s},
+     U = {\`U,\'U,\^U,\"U},
+     u = {\`u,\'u,\^u,\"u},
+     Y = {\'Y,\"Y},
+     y = {\'y,\"y},
+     Z = {\'Z,\.Z,\v Z},
+     z = {\'z,\.z,\v z}
+   }
+
+% Allow line breaks with \\ in specialcells
+  \newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+%Reference: http://www.jwe.cc/2012/03/stata-latex-tables-estout/ Accessed 14-09-28

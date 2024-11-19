@@ -410,6 +410,13 @@ ggsave(
     units = "in",
 )
 
+ggsave(
+	file = here(paste0(path_figures, "/absencecycleihds.tiff")),
+    height = 0.5 * page_height,
+    width = page_width,
+    units = "in",
+)
+
 plots_private <- list(plot_absence_private, plot_work_private)
 
 plot_private <- wrap_plots(plots_private, ncol = 1, axes = "collect") +
@@ -418,6 +425,13 @@ plot_private <- wrap_plots(plots_private, ncol = 1, axes = "collect") +
 
 ggsave(
 	file = here(paste0(path_figures, "/absencecycleprivateihds.pdf")),
+    height = 0.5 * page_height,
+    width = page_width,
+    units = "in"
+)
+
+ggsave(
+	file = here(paste0(path_figures, "/absencecycleprivateihds.tiff")),
     height = 0.5 * page_height,
     width = page_width,
     units = "in"

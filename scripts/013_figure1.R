@@ -1,5 +1,5 @@
 ###############################################################################
-# Name: 015_figure1.R
+# Name: 013_figure1.R
 # Author: Emmerich Davies <emmerich.davies@gmail.com>
 # Purpose: Creates a map showing how assembly constituencies are nested within
 # districts
@@ -69,6 +69,13 @@ figure_1
 
 ggsave(
     here::here("data/output/figures/district_ac_overlay.pdf"),
+    height = 3,
+    width = 3,
+    unit = "in"
+)
+
+ggsave(
+    here::here("data/output/figures/district_ac_overlay.tiff"),
     height = 3,
     width = 3,
     unit = "in"

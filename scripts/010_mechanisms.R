@@ -65,6 +65,14 @@ ggsave(
     bg = "transparent"
 )
 
+ggsave(
+    here("data/output/figures/alternativechannels.tiff"),
+    height = 4.5,
+    width = 6.5,
+    units = "in",
+    bg = "transparent"
+)
+
 # Full results tables #########################################################
 
 event_study_channels(outcome = "administrative_visits", df = df_src)

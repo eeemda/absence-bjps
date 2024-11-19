@@ -280,6 +280,14 @@ ggsave(
     bg = "transparent"
 )
 
+ggsave(
+    here("data/output/figures/testscorecycle.tiff"),
+    height = 4.5,
+    width = 6.5,
+    units = "in",
+    bg = "transparent"
+)
+
 models <- list(
     "Overall Score" = lm_overall,
     "Reading" = lm_reading,

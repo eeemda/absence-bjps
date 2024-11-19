@@ -1224,6 +1224,22 @@ eventStudy <- function(
 		    bg = "transparent"
 		)
 
+		ggsave(
+			here(
+				paste0(
+					"data/output/figures/anyabsencecycle",
+					management_type_text,
+					by_election_text,
+					".tiff"
+				)
+			),
+			plot,
+			height = 4.5,
+			width = 6.5,
+			units = "in",
+		    bg = "transparent"
+		)
+
 		if (by_election) {
 			ggsave(
 				here(
@@ -1232,6 +1248,22 @@ eventStudy <- function(
 						management_type_text,
 						by_election_text,
 						".pdf"
+					)
+				),
+				plot,
+				height = 4.5,
+				width = 6.5,
+				units = "in",
+			    bg = "transparent"
+			)
+
+			ggsave(
+				here(
+					paste0(
+						"data/output/figures/anyabsencecycle",
+						management_type_text,
+						by_election_text,
+						".tiff"
 					)
 				),
 				plot,

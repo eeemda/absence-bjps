@@ -1,5 +1,5 @@
 # Metadata ####################################################################
-# Name: 019_bounds_analysis.R
+# Name: 018_bounds_analysis.R
 # Author: Emmerich Davies <emmerich.davies@gmail.com>
 # Purpose: Re-runs main analysis bounding effect sizes
 
@@ -417,6 +417,14 @@ plot <- wrap_plots(plots, ncol = 3, axes = "collect") +
 
 ggsave(
     filename = file.path(here(), "data/output/figures/placebotest.pdf"),
+    plot,
+    height = 4.5,
+    width = 6.5,
+    units = "in"
+)
+
+ggsave(
+    filename = file.path(here(), "data/output/figures/placebotest.tiff"),
     plot,
     height = 4.5,
     width = 6.5,

@@ -1,6 +1,6 @@
 # Metadata ####################################################################
 # Author: Emmerich Davies <emmerich.davies@gmail.com>
-# Name: 016_chaudhury_comparison.R
+# Name: 014_chaudhury_comparison.R
 # Purpose: Compare absenteeism rates between IHDS and Chaudhury et al. 2005
 # Date Created: 2023/08/10
 
@@ -437,6 +437,13 @@ plot_data_compare
 
 ggsave(
     here("data/output/figures/absencecomparison.pdf"),
+    units = "in",
+    width = 6.5,
+    height = 4.5
+)
+
+ggsave(
+    here("data/output/figures/absencecomparison.tiff"),
     units = "in",
     width = 6.5,
     height = 4.5
