@@ -1,8 +1,8 @@
 # Absence
 
-Paper, replication code, and data sources for ["Absence: Electoral Cycles and Teacher Absenteeism in India", published in the _British Journal of Political Science](https://doi.org/10.1017/S0007123424000942).
+Paper, replication code, and data sources for ["Absence: Electoral Cycles and Teacher Absenteeism in India", published in the _British Journal of Political Science_](https://doi.org/10.1017/S0007123424000942).
 
-Clean data I can share can be found at the [British Journal of Political Science_ Dataverse site](https://doi.org/10.7910/DVN/WSNNIE). See the Data Sources section for more information on accessing all the data.
+Clean data I can share can be found at the [_British Journal of Political Science_ Dataverse site](https://doi.org/10.7910/DVN/WSNNIE). See the Data Sources section for more information on accessing all the data.
 
 All code is also available on Github at https://github.com/eeemda/absence-bjps
 
